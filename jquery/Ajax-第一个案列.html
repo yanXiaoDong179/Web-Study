@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+	<meta charset="utf-8">
+	<title>Ajax-</title>
+	<script type="text/javascript" src="js/jquery-3.2.1.js"></script>
+</head>
+<body>
+<input type="button" name="" value="Ajax提交" onclick="Ajax();"/>
+<div id="resText"></div>
+<script type="text/javascript">
+	//定义一个Ajax函数
+	function Ajax(){
+		var xmlHttpReq=null;	//声明一个空对象，用来装入XMLHttpRequest对象
+		xmlHttpReq=new XMLHttpRequest();	//给XMLHttpRequest对象赋值
+		//实例化成功后，使用open()方法初始化XMLHttpRequest对象，指定HTTP方法和要使用的服务器URL
+		xmlHttpReq.open("GET","test.php",true);	//调用open()方法并采用异步方式
+
+		xmlHttpReq.onreadystatechang=RequestCallBack;	//设置回调函数
+
+		xmlHttpReq.send(null);	//因为使用GET方法提交，所以可以使用NULL作为参数回调
+
+	}
+
+	function RequestCallBack(){
+		if(xmlHttpReq.readyState==4&&xmlHttpReq.status==200){
+			document.getElementById("resText").innerHTML=xmlHttpReq.responseText;
+		}
+	}
+
+</script>
+</body>
+</html>

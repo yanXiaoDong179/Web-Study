@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+	<meta charset="utf-8">
+	<title>创建构造函数</title>
+	<script type="text/javascript">
+		//构造函数看上去和常规函数很相似。不过按照约定，命名这个函数时，首字母要大写
+		//构造函数的行参取我们希望的对象属性值
+		function Dog(name,breed,weight){
+			//属性名和行参不要求相同，不过他们通常是一样的，这也是一个约定
+			//我们把对象属性初始化为传入构造函数的值
+			this.name=name;
+			this.breed=breed;
+			this.weight=weight;
+			//可以在构造函数中包含bark方法，将bark属性初始化为一个值
+			//注意：对象中有函数时，我们说这个对象有一个方法
+			this.bark=function(){
+				//方法中需要使用this.weight来指示对象中的属性
+				if(this.weight>25){
+					alert(this.name + " says Woof!");
+				}
+				else{
+					alert(this.naem + " says Yip");
+				}
+			//在对象中增加一个函数叫做方法，
+			//其次，这些事语句，需要一个";"结束语句
+			};
+		}
+		//创建几只狗，要结合构造函数使用
+		var fido = new Dog("Fido","Mixed",38);
+		var tiny = new Dog("Tiny","Chawalla",8);
+		var clifford = new Dog("Cliffird","Bloodhound",65);
+
+		//一旦得到对象，就可以调用他们的bark方法
+		fido.bark();
+		tiny.bark();
+		clifford.bark();
+	</script>
+</head>
+<body>
+
+</body>
+</html>

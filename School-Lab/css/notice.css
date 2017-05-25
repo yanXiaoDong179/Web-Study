@@ -1,0 +1,27 @@
+/*系统公告CSS*/
+.main{
+	width:800px;
+	margin:0 auto;
+	padding:40px 0;
+}
+.main h1{
+	color:#0B3657;
+	font-size:25px;
+	line-height: 1.5em;
+}
+.main span{
+	display: block;
+	height:40px;
+	padding-bottom: 10px;
+	margin-bottom: 10px;
+	border-bottom: 1px solid #ccc;
+}
+.main span p{
+	display: inline;
+	line-height: 30px;
+}
+.main article{
+	font-size: 16px;
+	line-height: 1.75em;
+	color: #333;
+}

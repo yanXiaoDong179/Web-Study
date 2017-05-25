@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+	<meta charset="utf-8">
+	<title>验证表单输入</title>
+	<script type="text/javascript">
+		function checkForm(){
+			var name = document.form1.uname;
+			var pwd = document.form1.Upwd;
+			if(name.value.length==0){
+				alert("请输入用户名");
+				document.form1.uname.focus();
+				return false;
+			}
+			if((name.value.length>0)&(name.value.length>8 || name.value.length<3)){
+				alert("长度要求3~8个字符");
+				document.form1.uname.select();
+				return false;
+			}
+			if(pwd.value==""){
+				alert("请输入密码");
+				pwd.focus();
+				return false;
+			}
+			return false;
+		}
+	</script>
+</head>
+<body>
+	<form name="form1" method="post" onsubmit="return checkForm()">
+		UserName:<input type="text" name="uname"><br/>
+		UserPassWord:<input type="password" name="Upwd"><br/>
+		<input type="submit" name="" value="提交">
+	</form>
+</body>
+</html>

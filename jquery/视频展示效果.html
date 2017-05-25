@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+	<meta charset="utf-8">
+	<title>视频展示</title>
+	<link rel="stylesheet" type="text/css" href="css/Nreset.css">
+	<script type="text/javascript" src="js/jquery-3.2.1.js"></script>
+	<style type="text/css">
+		.V_show{
+			width:1000px;
+			min-width: 800px;
+			padding:20px;
+			margin:20px auto;
+			border:1px solid #333;
+		}
+		.cartoon,.highlight_tip,.change_btn{
+			display:inline-block;
+			cursor:pointer;
+		}
+		.V_caption{
+			padding-bottom:10px;
+			border-bottom:1px solid #ccc;
+		}
+		.V_caption em{
+			float:right;
+		}
+		.V_content{
+			padding-top:10px;
+			overflow: hidden;
+			position: relative;
+			height:194px;
+		}
+		.V_content_list{
+			position: absolute;
+			height:184px;
+		}
+		.V_content_list ul li{
+			float:left;
+			width:239.5px;
+			padding:10px;
+		}
+		.V_content_list ul li img{
+			width:100%;
+		}
+		.current{
+			background-color:red;
+			color:yellow;
+		}
+	</style>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			var page=1;		//默认从第一版开始
+			var i=4;		//每版4张图片
+
+				//下一页
+			$(".next").click(function(){						//绑定click事件
+				var $parent = $(this).parents(".V_show");		//根据当前单击的元素获取到父元素
+				var $v_show = $parent.find(".V_content_list");	//遍历，搜索$parent元素中的所有指定节点
+				var $v_content = $parent.find(".V_content");	//同上
+				var v_width = $(".V_content").width();			//获取内容区的宽度
+				var len = $v_show.find("li").length;			//获取总的图片数目
+				var page_content = Math.ceil(len/i);			//获取总的版数
+
+				if(page == page_content){					//判断，如果到了最后一版，回到第一版
+					$v_show.animate({left:'0px'},"slow");	//通过改变left的值，回到第一版
+					page=1;		//第一版
+				}
+				else{			//改变left的值，每次为内容区的宽度
+					$v_show.animate({left:'-='+v_width},"slow");	
+					page++;		//版数+1
+				}
+					//给指定的span元素添加高亮样式，标示当前的版数
+					//eq() 方法返回带有被选元素的指定索引号的元素。
+				$parent.find("span")
+					.eq((page-1)).addClass("current")
+					.siblings().removeClass("current");
+			})
+				//上一页
+			$(".prev").click(function(){
+				var $parent = $(this).parents(".V_show");
+				var $v_show = $parent.find(".V_content_list");
+				var $v_content = $parent.find(".V_content");
+				var v_width = $(".V_content").width();
+				var len = $v_show.find("li").length;
+				var page_content = Math.ceil(len/i);		//同上
+					//判断，如果到了第一版，再次点击上一页，回到最后一版
+				if(page == 1){		//改变left的值，其值为（版数-1）*内容区宽度
+					$v_show.animate({left:'-='+v_width*(page_content-1)},"slow");
+					page=page_content;		//跳到最后
+				}
+				else{
+					$v_show.animate({left:'+='+v_width},"slow");
+					page--;											//由于此时是上一页，所以版数-1
+				}
+				$parent.find("span")
+					.eq((page-1)).addClass("current")
+					.siblings().removeClass("current");
+			})
+		})
+	</script>
+</head>
+<body>
+<div class="V_show">
+	<div class="V_caption">
+		<h2 class="cartoon" title="卡通动漫">热血动漫</h2>
+		<div class="highlight_tip">
+			<span class="current">1</span>
+			<span>2</span>
+			<span>3</span>
+			<span>4</span>
+		</div>
+		<div class="change_btn">
+			<span class="prev">上一页</span>
+			<span class="next">下一页</span>
+		</div>
+		<em><a href="#">更多</a></em>
+	</div>
+	<div class="V_content">
+		<div class="V_content_list">
+			<ul>
+				<li>
+					<a href="#">
+						<img src="img/img-01 (1).png" alt="海贼王"/>
+					</a>
+					<h4><a href="#" >海贼王</a></h4>
+					<span>播放:<em>23,324</em></span>
+				</li>
+				<li>
+					<a href="#">
+						<img src="img/img-01 (2).png" alt="海贼王"/>
+					</a>
+					<h4><a href="#" >海贼王</a></h4>
+					<span>播放:<em>23,324</em></span>
+				</li>
+				<li>
+					<a href="#">
+						<img src="img/img-01 (1).png" alt="海贼王"/>
+					</a>
+					<h4><a href="#" >海贼王</a></h4>
+					<span>播放:<em>23,324</em></span>
+				</li>
+				<li>
+					<a href="#">
+						<img src="img/img-01 (3).png" alt="海贼王"/>
+					</a>
+					<h4><a href="#" >海贼王</a></h4>
+					<span>播放:<em>23,324</em></span>
+				</li>
+				<li>
+					<a href="#">
+						<img src="img/img-01 (1).png" alt="海贼王"/>
+					</a>
+					<h4><a href="#" >海贼王</a></h4>
+					<span>播放:<em>23,324</em></span>
+				</li>
+				<li>
+					<a href="#">
+						<img src="img/img-01 (3).png" alt="海贼王"/>
+					</a>
+					<h4><a href="#" >海贼王</a></h4>
+					<span>播放:<em>23,324</em></span>
+				</li>
+				<li>
+					<a href="#">
+						<img src="img/img-01 (1).png" alt="海贼王"/>
+					</a>
+					<h4><a href="#" >海贼王</a></h4>
+					<span>播放:<em>23,324</em></span>
+				</li>
+				<li>
+					<a href="#">
+						<img src="img/img-01 (9).png" alt="海贼王"/>
+					</a>
+					<h4><a href="#" >海贼王</a></h4>
+					<span>播放:<em>23,324</em></span>
+				</li>
+				<li>
+					<a href="#">
+						<img src="img/img-01 (1).png" alt="海贼王"/>
+					</a>
+					<h4><a href="#" >海贼王</a></h4>
+					<span>播放:<em>23,324</em></span>
+				</li>
+				<li>
+					<a href="#">
+						<img src="img/img-01 (6).png" alt="海贼王"/>
+					</a>
+					<h4><a href="#" >海贼王</a></h4>
+					<span>播放:<em>23,324</em></span>
+				</li>
+				<li>
+					<a href="#">
+						<img src="img/img-01 (2).png" alt="海贼王"/>
+					</a>
+					<h4><a href="#" >海贼王</a></h4>
+					<span>播放:<em>23,324</em></span>
+				</li>
+				<li>
+					<a href="#">
+						<img src="img/img-01 (3).png" alt="海贼王"/>
+					</a>
+					<h4><a href="#" >海贼王</a></h4>
+					<span>播放:<em>23,324</em></span>
+				</li>
+				<li>
+					<a href="#">
+						<img src="img/img-01 (7).png" alt="海贼王"/>
+					</a>
+					<h4><a href="#" >海贼王</a></h4>
+					<span>播放:<em>23,324</em></span>
+				</li>
+				<li>
+					<a href="#">
+						<img src="img/img-01 (6).png" alt="海贼王"/>
+					</a>
+					<h4><a href="#" >海贼王</a></h4>
+					<span>播放:<em>23,324</em></span>
+				</li>
+				<li>
+					<a href="#">
+						<img src="img/img-01 (4).png" alt="海贼王"/>
+					</a>
+					<h4><a href="#" >海贼王</a></h4>
+					<span>播放:<em>23,324</em></span>
+				</li>
+				
+			</ul>
+		</div>
+	</div>
+</div>
+</body>
+</html>

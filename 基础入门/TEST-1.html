@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="zh-cmn-Hans">
+	<head >
+		<meta charset="utf-8">
+		<title>test-script</title>
+	</head>
+	<script>
+		//创建一个名为init的函数
+		function init(){
+			var planet = document.getElementById("one");
+			planet.innerHTML = "Red Alert:hello!";
+		}
+		//页面一加载完就执行init
+		window.onload = init;
+
+		//var tempByHour = new Array();
+		//创建数组
+		// tempByHour[0]=89;
+		// tempByHour[1]=32;
+		// tempByHour[2]=322;
+		// tempByHour[3]=93;
+		// tempByHour[4]=12;
+		// tempByHour[5]=83;
+
+		//创建数组
+		var tempByHour = [89,34,56,23,62];
+		//向数组添加新元素
+		tempByHour[5]= 45;
+		//使用数组元素，只需引用数组并提供一个索引
+		var message = "The tempByHour at 5 was" + tempByHour[5];
+		alert(message);
+		//数组的length属性，得到数组的大小
+		var numItems = "The tempByHour length is " + tempByHour.length;
+		alert(numItems);
+
+		//随机数Math
+		function makePhrases(){
+			//创建3个数组
+			var words1 = ["PPX","ppx","皮皮虾"];
+			var words2 = ["拖着","抓着","踩着"];
+			var words3 = ["221","323","111"];
+			//从各个数组中选取一个随机数
+			var rand1 = Math.floor(Math.random()*words1.length);
+			var rand2 = Math.floor(Math.random()*words2.length);
+			var rand3 = Math.floor(Math.random()*words3.length);
+
+			var phrases = words1[rand1] + " " + words2[rand2]+" "+words3[rand3];
+			var phrasesElement = document.getElementById("two");
+			phrasesElement.innerHTML = phrases;
+		}
+		window.onload = makePhrases;
+
+		//随机数
+		function fly(){
+			var width = new Array();
+			for(var x=0 ; x<2000 ; x++){
+				width[x] = x+1;
+			}
+
+			var height = new Array();
+			for(var y=0 ; y<2000 ; y++){
+				height[y] = y+1;
+			}
+
+			var randx = "The width is "+ Math.floor(Math.random()*width.length);
+			var randy =  "The height is "+Math.floor(Math.random()*height.length);
+
+			alert(randx);
+			alert(randy);
+		}
+		window.onload = fly;
+	</script>
+	<body>
+		<p id="one">标签一</p>
+		<p id="two">标签二</p>
+		<p id="three">标签三</p>
+	</body>
+</html>

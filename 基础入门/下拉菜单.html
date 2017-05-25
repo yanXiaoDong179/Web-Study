@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="zh-cmn-Hans">
+	<head>
+		<meta charset="utf-8">
+		<meta name="author" content="lyle">
+		<link rel="stylesheet" href="css/Nreset.css">
+		<link rel="stylesheet" href="css/public.css">
+		<link rel="stylesheet" href="css/test-1.css">
+		<title>下拉菜单-1</title>
+		<script>
+		function init(){
+			var menu = document.getElementById("me");
+			menu.onclick = navClick;
+			function navClick(){
+				if(menu.className=="menu"){
+					menu.className = "menu1";
+				}
+				else if(menu.className=="menu1"){
+					menu.className = "menu";
+				}
+			}
+			function res(){
+				menu.className="menu";
+			}	
+				//获取带有指定标签对象的集合
+				// var le = document.getElementByTagName("ul")[4];
+				// if(le.style.display=="none"){
+				// 	le.style.display="block";
+				// }
+				// else{
+				// 	le.style.display="none";
+				// }
+		}
+		window.onload=init;
+		</script>
+	</head>
+	<body onclick="res()" >
+		<div class="main">
+			<ul>
+				<li class="menu" onmouseover="this.className='menu1'" onmouseout="this.className='menu'">
+					<a href="#">移上来显示</a>
+					<ul>
+						<li><a href="#">注意：</a></li>
+						<li><a href="#">之后的</a></li>
+						<li><a href="#">每一个</a></li>
+						<li><a href="#">鼠标移出</a></li>
+						<li><a href="#">下拉菜单</a></li>
+						<li><a href="#">就会隐藏</a></li>
+					</ul>
+				</li>
+				<li class="menu" onmousedown="this.className='menu1'" onmouseout="this.className='menu'">
+					<a href="#">按下鼠标显示</a>
+					<ul>
+						<li><a href="#">项目一</a></li>
+						<li><a href="#">项目二</a></li>
+						<li><a href="#">项目三</a></li>
+						<li><a href="#">项目四</a></li>
+						<li><a href="#">项目五</a></li>
+						<li><a href="#">项目六</a></li>
+						<li><a href="#">项目七</a></li>
+					</ul>
+				</li>
+				<li class="menu" onmouseup="this.className='menu1'" onmouseout="this.className='menu'">
+					<a href="#">释放鼠标显示</a>
+					<ul>
+						<li><a href="#">项目一</a></li>
+						<li><a href="#">项目二</a></li>
+						<li><a href="#">项目三</a></li>
+						<li><a href="#">项目四</a></li>
+						<li><a href="#">项目五</a></li>
+						<li><a href="#">项目六</a></li>
+						<li><a href="#">项目七</a></li>
+						<li><a href="#">项目八</a></li>
+					</ul>
+				</li>
+				<li class="menu" ondblclick="this.className='menu1'" onmouseout="this.className='menu'">
+					<a href="#">双击显示</a>
+					<ul>
+						<li><a href="#">项目一</a></li>
+						<li><a href="#">项目二</a></li>
+						<li><a href="#">项目三</a></li>
+						<li><a href="#">项目四</a></li>
+						<li><a href="#">项目五</a></li>
+						<li><a href="#">项目六</a></li>
+						<li><a href="#">项目七</a></li>
+					</ul>
+				</li>
+				<li id="me" class="menu">
+					<a href="#">单击显示</a>
+					<ul>
+						<li><a href="#">项目一</a></li>
+						<li><a href="#">项目二</a></li>
+						<li><a href="#">项目三</a></li>
+						<li><a href="#">项目四</a></li>
+						<li><a href="#">项目五</a></li>
+						<li><a href="#">项目六</a></li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+	</body>
+</html>

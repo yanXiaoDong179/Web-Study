@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+	<meta charset="utf-8">
+	<title>CSS表格布局</title>
+	<style type="text/css">
+		
+		/*css控制表格样式*/
+			/*外面框*/
+		table{
+			border:1px solid #000;
+		}
+			/*单元格边框*/
+		th,td{
+			border:1px solid #000;
+		}
+		/*以上设置好后，表格呈现双线表格*/
+			/*接下来改为单线*/
+		table{
+			border-collapse:collapse;	/*border-collapse 属性设置表格的边框是否被折叠成一个单一的边框或隔开*/
+		}
+		/*设置相邻单元格边框的距离，此方法只适用于边框隔开的情况下*/
+		table{
+			border-collapse: separate;
+			border-spacing: 5px;
+		}
+		/*背景颜色*/
+		table{
+			border-collapse:collapse;
+			background-color: red;	/*背景颜色*/
+			color:yellow;			/*文字颜色*/
+		}
+		td{
+			background-color: green;
+		}
+		/*边框颜色*/
+		table,th,td{
+			border-color: #ccc;
+		}
+		/*表格填充*/
+		td{
+			padding:15px;
+		}
+		/*对齐*/
+		th,td{
+			height:50px;		/*单元格高度*/
+			width:100px;		/*单元格宽度*/
+			padding:0;				/*取消单元格填充*/
+			text-align: right;		/*水平对齐方式*/
+			vertical-align:center;	/*垂直对齐方式*/
+		}
+		table{
+			width:1000px;		/*table的高度和宽度和平均分配给单元格，th除外*/
+			height:500px;
+		}
+		/*无边框设置*/
+		table,th{
+			border:none;
+		}
+	</style>
+</head>
+<body>
+
+<!-- 内部设置表格样式： -->
+
+<!-- 设置表格的边框：
+	边框>>> border="num px"
+	边框颜色>>> bordercolor="#123456" 
+	单元格距离>>> cellspacing="num px"
+	文字与边框的距离>>> cellpadding="num px"
+	背景颜色>>> bgcolor="#123456" 
+	背景图像>>> background
+	对齐方式>>> align="left/right/center" -->
+
+<!-- 单元格属性：
+	单元格大小>>> width height
+	水平跨度>>> colspan
+	垂直跨度>>> rowspan -->
+<table>
+	<thead>
+		<tr>
+			<th>th1</th>
+			<th>th2</th>
+			<th>th3</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>1001</td>
+			<td>1002</td>
+			<td>1003</td>
+		</tr>
+		<tr>
+			<td>1101</td>
+			<td>1102</td>
+			<td>1103</td>
+		</tr>
+		<tr>
+			<td>1201</td>
+			<td>1202</td>
+			<td>1203</td>
+		</tr>
+	</tbody>
+	<tfoot>
+		
+	</tfoot>
+</table>
+</body>
+</html>

@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="zh-cmn-Hans">
+	<head>
+		<meta charset="utf-8">
+		<meta name="author" content="lyle">
+		<title>实验查询-学生-高校实验预约管理系统</title>
+		<link rel="stylesheet" href="css/labPublic.css">
+		<link rel="stylesheet" href="css/nav.css">
+		<link rel="stylesheet" href="css/stuReserve.css">
+		<link rel="stylesheet" href="css/stuProject.css">
+		<script type="text/javascript" src="js/jquery-3.2.1.js"></script>
+	</head>
+	<body>
+	<!-- 页眉 -->
+		<header>
+			<img src="img/logo-3.png" alt="logo">
+			<ul class="vice-nav">
+				<li>
+					<a href="">
+					<img src="img/user.png" alt="message">鄢小冬</a>
+					<ul>
+						<li><a href="stuInformation.html">
+							<i class="iconfontTwo icon-geren"></i>个人信息</a></li>
+						<li><a href="stuSetupPassword.html">
+							<i class="iconfontTwo icon-shezhi"></i>修改密码</a></li>
+						<li><a href="stuSetupMessage.html">
+							<i class="iconfontTwo icon-shezhi"></i>修改资料</a></li>
+						<li><a href="logIn.html">
+							<i class="iconfontTwo icon-tuichu"></i>退出系统</a></li>
+					</ul>
+				</li>
+				<li class="home">
+					<a href="homeStudent.html">
+					<img src="img/home.png">首页</a>
+				</li>
+			</ul>
+		</header>
+		<div class="main">
+		<!-- 导航 -->
+			<ul class="nav">
+				<li url=" "><a href="homeStudent.html">首页</a></li>
+		        <li url=" "><a href="stuReserve.html">课程实验预约</a></li>
+		        <li url=" "><a href="stuApply.html">开放实验申请</a></li>
+		        <li url=" "><a href="stuProject.html" class="on">我的实验查询</a>
+		        </li>
+		        <li url=" "><a href="stuScore.html">我的成绩查询</a></li>
+			</ul>
+		<!-- 内容展示 -->
+			<div class="content">
+				<div>
+					<a class="title nav1" >课程实验</a>
+					<a class="title nav2" >开放性实验</a>
+				</div>
+				<div class="page">
+					<table id="table1" class="table">
+						<thead>
+							<tr>
+								<td>实验名称</td>
+								<td>实验室编号</td>
+								<td>指导老师</td>
+								<td>实验日期</td>
+								<td>实验时间</td>
+								<td>实验器材</td>
+								<td>实验人数</td>
+								<td>操作</td>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>课程实验一</td>
+								<td>SYS-001</td>
+								<td>喵喵</td>
+								<td>123456789</td>
+								<td>18-20</td>
+								<td>PC</td>
+								<td>25</td>
+								<td>
+									<a href="#">
+									<i class="iconfontA icon-shanchu"></i></a>
+								</td>
+							</tr>
+							<tr>
+								<td>课程实验实验二</td>
+								<td>SYS-001</td>
+								<td>喵喵</td>
+								<td>2017</td>
+								<td>18-20</td>
+								<td>PC</td>
+								<td>25</td>
+								<td>
+									<a href="#">
+									<i class="iconfontA icon-shanchu"></i></a>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+					<table id="table2" class="table">
+						<thead>
+							<tr>
+								<td>实验名称</td>
+								<td>实验室编号</td>
+								<td>指导老师</td>
+								<td>实验日期</td>
+								<td>实验时间</td>
+								<td>实验器材</td>
+								<td>实验人数</td>
+								<td>评分</td>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>开放性实验一</td>
+								<td>SYS-001</td>
+								<td>喵喵</td>
+								<td>123456789</td>
+								<td>18-20</td>
+								<td>PC</td>
+								<td>25</td>
+								<td>A-D</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	<!-- 页脚 -->
+		<footer>
+			
+		</footer>
+		<script type="text/javascript">
+		function nav(obj,eventobj){
+			$(obj).click(function(){
+				$(this).addClass('onfocus');
+				$(this).siblings().removeClass('onfocus');
+				$(eventobj).show();
+				$(eventobj).siblings().hide();
+			})
+		}
+		nav(".nav1","#table1");
+		nav(".nav2","#table2");
+		$(".nav1").click();
+		</script>
+	</body>
+</html>

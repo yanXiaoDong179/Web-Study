@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="css/Nreset.css">
+	<title>区块切换</title>
+	<script type="text/javascript" src="Script/jquery-3.2.1.js"></script>
+	<style type="text/css">
+		header{
+			height:50px;
+		}
+		ul{
+			width: 30%;
+			float:left;
+		}
+		ul li{
+			display:block;
+			width: 100%;
+			height:30px;
+			line-height: 30px;
+			font-size:16px;
+			padding-left:50%;
+			margin-bottom: 1px;
+		}
+		ul li:nth-of-type(2n+1){
+			background-color: #D9DBDD;
+		}
+		#page{
+			position: relative;
+			margin-left: 30%;
+			width:70%;
+		}
+		#page div{
+			position: absolute;
+			width:100%;
+			top:0;
+			left:0;
+			display: none;
+		}
+		#page div:nth-child(1){
+			height:100px;
+			background-color:red;
+		}
+		#page div:nth-child(2){
+			height:200px;
+			background-color:blue;
+		}
+		#page div:nth-child(3){
+			height:300px;
+			background-color:yellow;
+		}
+		#page div:nth-child(4){
+			height:340px;
+			background-color:#567;
+		}
+		#page div:nth-child(5){
+			height:150px;
+			background-color:#437EA2;
+		}
+		.active{
+			display:block !important;
+		}
+	</style>
+	<script type="text/javascript">
+	window.onload=function(){
+		var nav = document.getElementsByTagName("li");
+		// var content = document.getElementById("page");
+		var con = document.getElementById("page");
+		var divs = con.getElementsByTagName("div");
+		for(var i=0;i<nav.length;i++){
+
+			nav[i].index=i;
+			nav[i].onclick=function(){
+				for(var i=0;i<nav.length;i++){
+					nav[i].className="";
+					divs[i].className="";
+				}
+				// alert(this.index);
+				divs[this.index].className="active";
+			}
+		}
+		nav[0].onclick();
+	}
+	</script>
+</head>
+<body>
+<!-- 页眉 -->
+<h1>标题</h1>
+<!-- 导航 -->
+<div>
+	<ul>
+		<li >页面一</li>
+		<li >页面二</li>
+		<li >页面三</li>
+		<li >页面四</li>
+		<li >页面五</li>
+	</ul>
+</div>
+<!-- 区块 -->
+<div id="page">
+	<div> </div>
+	<div> </div>
+	<div> </div>
+	<div> </div>
+	<div> </div>
+	<!-- <h1>CONTENT</h1> -->
+</div>
+<!-- 页脚 -->
+<footer></footer>
+</body>
+</html>

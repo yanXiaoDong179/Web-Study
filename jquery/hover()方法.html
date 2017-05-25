@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>hover()方法</title>
+	<script type="text/javascript" src="js/jquery-3.2.1.js"></script>
+	<style type="text/css">
+		.active{
+			background-color:#000;
+			color:#fff;
+		}
+		.newActive{
+			background-color: red;
+			color:yellow;
+		}
+	</style>
+	<script type="text/javascript">
+			
+		$(document).ready(function(){
+			//mouseover()/mouseout()方法
+		// 	$("h1").mouseover(function(){
+		// 		$(this).addClass("active");
+		// 	}).mouseout(function(){
+		// 		$(this).removeClass("active");
+		// 	})
+
+		// $("h1").toggle(function(){
+		// 	$(this).addClass("active");
+		// },function(){
+		// 	$(this).removeClass("active");
+		// });
+
+				//当鼠标移入元素上，触发第一个函数
+			$("#h1").hover(function(){
+				$(this).addClass("active");
+					//当鼠标移出，触发第二个函数
+			},function(){
+				$(this).removeClass("active");
+			})
+
+			$("#h1").click(function(){
+				$(this).addClass("newActive");
+				var type = "当前触发的事件类型："+event.type;		//event.type 返回事件类型
+				var target = "当前触发的事件元素"+event.target;		//获取到触发事件的元素
+				var $xy = "X坐标："+event.pageX+";Y坐标："+event.pageY;
+				var $p1 = $("<p>"+type+"</p>");
+
+				$("body").append($p1);
+				//event.stopPropagation();	//阻止冒泡
+				return false;		//阻止事件冒泡以及元素的默认行为
+			})
+				//点击html事件
+			$("html").click(function(){
+				$("#h1").removeClass("newActive");
+			})
+		})
+	</script>
+</head>
+<body>
+<h1 id="h1">移入添加样式，移除去除</h1>
+</body>
+</html>

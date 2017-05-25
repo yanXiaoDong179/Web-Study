@@ -1,0 +1,33 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>创建文本节点createTextNode</title>
+<style type="text/css">
+
+.message{    
+	width:200px;
+	height:100px;
+	background-color:#CCC;}
+.class{
+    color:red;
+}
+</style>
+</head>
+<body>
+<script type="text/javascript">
+	//创建一个节点，返回Element方法
+    var p = document.createElement("p");
+    //
+    p.className="message";
+    //p.setAttribute("class","");     //修改P元素的class属性
+    //创建一个新的文本节点，返回新的text文本节点
+    var text = document.createTextNode("I Love JavaScript");
+    //把text文本节点作为一个子节点插入到p节点中
+    p.appendChild(text);
+    //把p节点作为子节点插入到body中
+    document.body.appendChild(p);
+</script> 
+
+</body>
+</html>

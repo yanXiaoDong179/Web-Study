@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="zh-cmn-Hans">
+<head>
+	<meta charset="utf-8">
+	<title>First-javascript</title>
+</head>
+<body>
+	<script>
+		// function print(s){
+		// 	document.write(s);
+		// }
+		// print("hello world!<br>");
+		// function max(a,b){
+		// 	return a>b? a:b;
+		// }
+		// function add(u,v){
+		// 	var add = 0;
+		// 	add=u+v;
+		// 	print(add);
+		// }
+		// add(231,12);
+		/*创建数组*/
+		// var marks = new Array();
+		// marks[0] = 99;
+		// marks[1] = 98;
+		// marks[2] = 89;
+
+		// var b = new Array(size);
+
+		// var c = new Array(d1,d2,d3,d4);
+
+		// var d = [d1,d2,d3,d4]; 
+
+		// var colors = ["red","blue","yellow"];
+		// alert(colors[0]);
+		// colors[2]="block";
+		// alert("colors.length="+colors.length);
+		/*length可写*/
+		// alert(colors[2]);
+		// colors.length = 4;
+		// colors[colors.length] = "num1";
+		// colors[colors.length] = "num2";
+		// alert(colors[3]);
+
+		function Rect(w,h){
+			this.width = w; this.height = h ;
+			this.area = function(){
+				return this.width*this.height;
+			}
+		}
+		var r = new Rect(5,10);
+		alert(r.area());
+
+		// var o = new Object();
+		// o.name = "Lyle";
+		// o.age = 19;
+		// o.salary = 300;
+		// for (var x in o){
+		// 	alert(x+"="+o[x]);
+		// }
+	</script>
+</body>
+</html>

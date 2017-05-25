@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+	<meta charset="utf-8">
+	<title>Ajax-jquery</title>
+	<script type="text/javascript" src="js/jquery-3.2.1.js"></script>
+</head>
+<body>
+<input type="button" id="send" value="Ajax获取" name="">
+<div class="comment">已有评论：</div>
+<div id="resText"></div>
+<script type="text/javascript">
+	$(function(){
+		$("#send").click(function(){
+			$("#resText").load("test.html .para");
+		})
+	})
+</script>
+</body>
+</html>

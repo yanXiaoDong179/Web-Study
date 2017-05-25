@@ -1,0 +1,37 @@
+<html>
+<head>
+<meta charset="utf-8">
+<title>HTML DOM selectedIndex 属性</title>
+<script type="text/javascript">
+function getIndex()
+  {
+  var x=document.getElementById("mySelect")
+  alert(x.selectedIndex)
+  }
+	// 定义和用法
+
+	// selectedIndex 属性可设置或返回下拉列表中被选选项的索引号。
+
+	// 注释：若允许多重选择，则仅会返回第一个被选选项的索引号。
+	// 语法
+
+	// selectObject.selectedIndex=number
+
+</script>
+</head>
+<body>
+
+<form>
+Select your favorite fruit:
+<select id="mySelect">
+  <option>Apple</option>
+  <option>Orange</option>
+  <option>Pineapple</option>
+  <option>Banana</option>
+</select>
+<br /><br />
+<input type="button" onclick="getIndex()" value="Alert index of selected option">
+</form>
+
+</body>
+</html>

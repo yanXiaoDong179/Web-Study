@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+	<meta charset="utf-8">
+	<title>jQuery-page-53</title>
+	<script type="text/javascript" src="js/jquery-3.2.1.js"></script>
+	<style type="text/css">
+		body{
+			width:800px;
+			margin:10px auto;
+		}
+		.Sub{
+			overflow: hidden;
+			border:1px solid #333;
+		}
+		ul{
+			display: table;
+			width:100%;
+			padding:0px;
+			margin:0px;
+			list-style-type: none;
+		}
+		li{
+			display: block;
+			width:33.33%;
+			text-align: center;
+			float:left;
+		}
+		.promoted{
+			color: red ;
+		}
+		li,a{
+			color:#333;
+			text-decoration: none;
+		}
+		.showmore{
+			width:120px;
+			height:40px;
+			line-height: 40px;
+			text-align: center;
+			margin:10px auto;
+			border:1px solid #333;
+		}
+	</style>
+</head>
+<body>
+<div class="Sub">
+	<ul>
+		<li><a href="#"> 佳能</a><i>(30223) </i></li>
+		<li><a href="#"> 索尼</a><i> (2311)</i></li>
+		<li><a href="#"> 三星</a><i> (3123)</i></li>
+		<li><a href="#"> 尼康</a><i> (3123)</i></li>
+		<li><a href="#"> 松下</a><i> (3123)</i></li>
+		<li><a href="#"> 卡西欧</a><i>(3123) </i></li>
+		<li><a href="#"> 富士</a><i> (3123)</i></li>
+		<li><a href="#"> 宾得</a><i>(3123) </i></li>
+		<li><a href="#"> 柯达</a><i> (3123)</i></li>
+		<li><a href="#"> 理光</a><i>(3123) </i></li>
+		<li><a href="#"> 奥林巴斯</a><i> (3123)</i></li>
+		<li><a href="#"> 明基</a><i> (3123)</i></li>
+		<li><a href="#"> 爱国者</a><i> (3123)</i></li>
+		<li><a href="#"> 铁三角</a><i> (3123)</i></li>
+		<li><a href="#"> 其他品牌</a><i> (3123)</i></li>
+	</ul>
+	<div class="showmore">
+		<a href="more.html"><span>显示全部名牌</span></a>
+	</div>
+</div>
+<script type="text/javascript">
+
+		var $category = $("ul li:gt(5):not(:last)");
+		$category.hide();	//隐藏上面获取的jquery对象
+		var $toggleBtn = $('div .showmore > a');	//获取“显示全部品牌按钮”
+		$toggleBtn.click(function(){				//给按钮添加点击事件
+			if($category.is(":visible")){
+					//find()方法
+					//在元素内部寻找元素，对父元素的子集进行操作
+				$category.hide();
+				$(this).find('span').text("显示全部名牌");
+				$('ul li').removeClass("promoted");	//为匹配的元素去除指定的
+			}else{
+				$category.show();
+				$(this).find('span').text("精简显示品牌");
+					//filter()方法
+					//筛选出与指定表达式匹配的元素集合，对自身集合元素进行筛选
+				$('ul li').filter(":contains('佳能'),:contains('尼康'),:contains('奥林巴斯')")
+					.addClass("promoted");	//为匹配的元素添加类名
+			}
+			return false;
+		});
+
+</script>
+</body>
+</html>

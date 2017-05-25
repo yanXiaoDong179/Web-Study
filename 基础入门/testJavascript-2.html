@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="zh-cmn-Hans">
+<head>
+	<meta charset="utf-8">
+	<title>test-2</title>
+	<script src="Script/play-list-store.js"></script>
+	<script src="Script/list-store.js"></script>
+	<style>
+
+	/*一些CSS样式*/
+		ul{
+			list-style-type: none;
+			width:500px;
+			margin:0px;
+			padding:0px;
+		}
+		ul li{
+			display:block;
+			height:50px;
+			line-height: 50px;
+			font-size:16px;
+		}
+	</style>
+	
+</head>
+<body>
+<form>
+<!-- 文本输入框 -->
+	<input type="text" id="songTextInput" size="40" placeholder="Song Name" value="">
+<!-- 按钮 -->
+	<input type="button" id="addButton" value="Add Song">
+</form>
+<ul id="playList">
+</ul>
+</body>
+</html>

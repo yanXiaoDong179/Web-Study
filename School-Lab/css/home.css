@@ -1,0 +1,35 @@
+/*系统公告CSS*/
+
+.content ul li{
+	width:50%;
+	min-height: 35px;
+	padding-left:20px;
+	margin-bottom:10px;
+	float:left;
+}
+.content ul li span{
+	float:right;
+	line-height:35px;
+	padding-right: 20px;
+}
+.content ul li a{
+	display: inline-block;
+	line-height:35px;
+	padding-left:20px;
+	font-size:16px;
+	font-family:SimHei;
+	color:#383837;
+	padding-left:10px;
+	border-left:3px solid #EFB711;
+}
+
+.content ul li a:hover{
+	font-size:18px;
+	color:#73C4AC;
+	border-color:#73C4AC;
+}
+.page-nav{
+	position: absolute;
+	bottom:30px;
+	left:calc(50% - 50px);
+}

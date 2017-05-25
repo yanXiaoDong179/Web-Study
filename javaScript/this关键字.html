@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+	<meta charset="utf-8">
+	<title>this关键字</title>
+	<script type="text/javascript">
+	/*	JavaScript 语言中的 this	*/
+
+		/*	作为对象方法调用	*/
+		var point = { 
+			x : 1, 
+			y : 2, 
+			moveTo : function(x, y) { 
+			    this.x = this.x + x; 
+			    this.y = this.y + y; 
+			    alert(this.x);
+			    alert(this.y);;
+		    } 
+		}; 
+		point.moveTo(1, 1)//this 绑定到当前对象，即 point 对象
+
+		/*	作为函数调用	*/
+		/*	此时 this 绑定到全局对象。在浏览器中，window 就是该全局对象	*/
+		function makeNoSense(x) { 
+			this.x = x; 
+		} 
+		makeNoSense(5); 
+		alert("x="+x);// x 已经成为一个值为 5 的全局变量
+
+		var point = { 
+		x : 0, 
+		y : 0, 
+		moveTo : function(x, y) { 
+		    // 内部函数
+		    var moveX = function(x) {  
+		    this.x = x;//this 绑定到了哪里？window
+		    			//this 应该绑定到其外层函数对应的对象上
+		   }; 
+		   // 内部函数
+		   var moveY = function(y) { 
+		   this.y = y;//this 绑定到了哪里？
+		   }; 
+		 
+		   moveX(x); 
+		   moveY(y); 
+		   } 
+		}; 
+		point.moveTo(1, 1); 
+		alert(point.x); //==>0 
+		alert(point.y); //==>0 
+		alert(x); //==>1 
+		alert(y); //==>1	
+
+		// var point = { 
+		// x : 0, 
+		// y : 0, 
+		// moveTo : function(x, y) { 
+		//      var that = this; 
+		//     // 内部函数
+		//     var moveX = function(x) { 
+		//     	that.x = x; 	// that绑定在其外层函数对应的对象上
+		//     }; 
+		//     // 内部函数
+		//     var moveY = function(y) { 
+		//     	that.y = y; 
+		//     } 
+		//     moveX(x); 
+		//     moveY(y); 
+		//     } 
+		// }; 
+		// point.moveTo(2, 1); 
+		// alert(point.x); //==>1 
+		// alert(point.y); //==>1
+	</script>
+</head>
+<body>
+
+</body>
+</html>

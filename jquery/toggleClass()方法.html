@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>toggle()</title>
+	<script type="text/javascript" src="js/jquery-3.2.1.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			
+			$("h1").click(function(){
+					//交替添加、去除class
+				$(this).next().toggleClass("active");
+
+					//判断h2元素是否显示，是则隐藏，否则显示
+				if($("h1+h2").is(":visible")){
+						//只修改透明度 直到隐藏
+					//$("h1+h2").fadeOut();
+
+					$("h1+h2").hide(1000);		//数字代表过渡时间
+				}else{
+						//只修改透明度，直到完全显示
+					//$("h1+h2").fadeIn();
+
+					$("h1+h2").show(1000);
+				}
+			})
+				//toggle()方法，交替显示与隐藏
+			$("h3").click(function(){
+				$(this).next().toggle(1000);
+			})
+		})
+	</script>
+	<style type="text/css">
+		.active{
+			display:none;
+		}
+	</style>
+</head>
+<body>
+<h1>Click here</h1>
+<h2>显示/隐藏</h2>
+<h3>Click here</h3>
+<h4>hello world</h4>
+</body>
+</html>

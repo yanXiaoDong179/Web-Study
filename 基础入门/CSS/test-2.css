@@ -1,0 +1,50 @@
+
+/*下拉菜单css*/
+.main{
+	
+	width:100%;
+}
+.main ul{
+	overflow: auto;
+}
+.main>ul>li{
+	float:left;
+	width:150px;
+	text-align:center;
+	padding:10px;
+}
+.main>ul>li>a{
+	display:block;
+	background-color: #D7D8DA;
+	color:#353637;
+	font-size:18px;
+	line-height: 40px;
+	width:130px;
+}
+.main>ul>li>a:hover{
+	background-color:#5F6062;
+	color:#fff;
+}
+.main ul li:hover ul{
+	display:block;
+}
+.main ul li ul{
+	display:none;
+}
+.main ul li ul li{
+	width:110px;
+	height:30px;
+	margin-left:10px;
+	margin-bottom: 1px;
+}
+.main ul li ul li a{
+	display:block;
+	background-color: #D7D8DA;
+	color:#353637;
+	font-size:16px;
+	line-height: 30px;
+}
+.main ul li ul li a:hover{
+	background-color: #FBC400;
+	color:#000;
+}

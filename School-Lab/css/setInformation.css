@@ -1,0 +1,119 @@
+/*新增信息CSS*/
+#addstudents{
+	display: none;
+}
+#addstudents table{
+	margin-left:35px;
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+#addstudents table tr{
+	border-bottom: 1px solid #f0f0f0;
+}
+#addstudents table tr:last-child{
+	border:none;
+}
+#addstudents table tr td:nth-child(1){
+	width:120px;
+	font-size:15px;
+	padding:15px 0;
+}
+#addstudents table tr td:nth-child(2){
+	width:400px;
+	font-size:15px;
+	padding:15px 0;
+}
+input[type="text"]{
+	color:#333;
+	padding: 5px 10px;
+	font-size: 15px;
+	border: 1px solid #c8c8c8;
+	border-radius: 4px;
+	background-color: hsla(0,0%,71%,.1);
+}
+textarea{
+	min-width:400px;
+	max-width: 800px;
+	height:150px;
+	padding:2px;
+	font-size:14px;
+}
+input[type="text"]:focus,textarea:focus{
+	border:1px solid #A5C7FE;
+}
+.save{
+	display: inline-block;
+	font-weight: 400;
+	text-align: center;
+	touch-action: manipulation;
+	padding: 6px 12px;
+	font-size: 14px;
+	color:#fff;
+	background-color:#42C02E;
+	cursor:pointer;
+	width: 100px;
+	margin:10px 35px 10px;
+	border-radius: 4px;
+	border: none;
+}
+.save:hover{
+	background-color: #3DB922;
+}
+#information{
+	width:94%;
+	margin-left:3%;
+	border-collapse: collapse;
+	border-spacing: 0;
+	border-padding:10px;
+}
+#information tr td{
+	min-width: 70px;
+	text-align: center;
+}
+#information thead td{
+	font-size: 16px;
+	padding:7px 0;
+	background-color:#E9BC4C !important;
+}
+#information tbody td{
+	padding:5px;
+}
+#information tbody tr:nth-of-type(2n+2){
+	background-color:#D1E0E9;
+}
+#information i:hover{
+	color:#EA6F5A;
+}
+#information a:focus i{
+	color:#EA6F5A;
+}
+.content div:nth-of-type(1){
+	border-bottom:1px solid #DEE1E3;
+	margin-bottom:15px;
+	font-size: 0;
+}
+.title{
+	display:inline;
+	cursor: pointer;
+	height:28px;
+	padding:5px 5px 0 5px;
+	margin:0;
+	border:none;
+	margin-left:1px;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+	color:#fff;
+	background-color:#A7A79D;
+}
+.title:hover{
+	color:#fff;
+	background-color:#EA6F5A;
+}
+.page{
+	position: relative;
+}
+
+.onfocus{
+	color:#fff;
+	background-color:#EA6F5A;
+}

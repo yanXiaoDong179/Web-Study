@@ -1,0 +1,113 @@
+/*审核学士开放性实验CSS代码*/
+
+#navProject tr>td>a{
+	color:#333;
+}
+a{
+	display: inline-block;
+	cursor: pointer;
+}
+#navProject{
+	width:94%;
+	margin-left:3%;
+	border-collapse: collapse;
+	border-spacing: 0;
+	border-padding:10px;
+}
+#navProject tr td{
+	min-width: 70px;
+	text-align: center;
+}
+#navProject thead td{
+	font-size: 16px;
+	padding:7px 0;
+	background-color:#E9BC4C !important;
+}
+#navProject tbody td{
+	padding:5px;
+}
+a i[class~="icon-gou"]:hover{
+	color:green;
+}
+a i[class~="icon-cha"]:hover{
+	color:red;
+}
+#navProject tr:hover{
+	background-color:#F5EFE0;
+}
+.onfocus{
+	background-color:#F5E7C8 !important;
+}
+.det ,.addNotice{
+	margin: 20px auto;
+	width:800px;
+	background-color:#fff;
+}
+.detail ,.add{
+	width:100%;
+	padding:0;
+	margin:0;
+	padding-left:15px;
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+.detail caption ,.add caption{
+	font-size:16px;
+	padding:10px 0;
+	border-top-left-radius:10px; 
+	border-top-right-radius:10px; 
+	background-color:#9CD9EF;
+}
+.detail tr:nth-of-type(2n+2){
+	background-color: #C6E6F2;
+}
+
+.detail tr td:nth-child(1){
+	width:30%;
+	font-size:15px;
+	padding:10px 0 10px 10px;
+}
+.detail tr td:nth-child(2){
+	width:70%;
+	font-size:15px;
+	padding:20px 0;
+}
+.explain{
+	line-height: 23px;
+	letter-spacing: 1px;
+}
+.addNotice tr{
+	height:50px;
+	border-bottom:1px solid #ccc;
+}
+.addNotice tr:last-child{
+	border:none;
+}
+.addNotice tr td:nth-child(1){
+	width:20%;
+	font-size:15px;
+	padding:10px 0 10px 10px;
+}
+textarea{
+	margin:10px 0;
+	width: 630px;
+	max-width: 630px;
+	height:250px;
+	padding:2px;
+	font-size:14px;
+}
+input[type="text"]{
+	width:250px;
+	line-height:25px;
+	padding-left:10px;
+}
+
+input[type="text"]:focus,textarea:focus{
+	border:1px solid #A5C7FE;
+}
+button[name="fabu"]{
+	display:block;
+	width:160px;
+	height:35px;
+	margin:0 auto;
+}

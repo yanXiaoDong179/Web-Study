@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="zh-cmn-Hans">
+	<head>
+		<meta charset="utf-8">
+		<meta name="author" content="lyle">
+		<title>js对象</title>
+		<script>
+			//创建一个名为NIT的函数
+			function init(){
+				//创建一个对象，并把值赋值给fido
+				var fido = {
+					//fido含有4个属性
+					name: "Fido",
+					weigth: 40,
+					breed: "Mixd",
+					loves: ["walks","fetching balls"],
+					//在对象中创建一个函数 
+					//这个函数就是这个对象的一个方法
+					bark:function() {
+						alert("对象中的函数是一个方法");
+					}
+				};
+				fido.bark();
+				//增加
+				fido.age = 5;
+				alert( fido.age);
+				//删除
+				delete fido.age;
+				alert(fido.age);
+				//用.记法访问对象的属性
+				if(fido.weigth>25){
+					alert("WOOF");
+				}
+				else{
+					alert("yip");
+				}
+
+				//使用一个串结合[]记法访问
+				var breed = fido["breed"];
+				if(breed=="Mixd"){
+					alert("Best in show");
+				}
+
+				//改变属性的值
+				fido.weigth = 27;
+				fido.breed = "Great";
+				//向LOVES数组添加一个新元素
+				fido.loves.push("sss");
+
+				//枚举对象所有的值
+				var prop;
+				//一一返回fido的所有属性
+				for(prop in fido){
+					//
+					alert("Fido has a "+prop+" property");
+					//
+					if(prop=="name"){
+						alert("This is " + fido[prop]);
+					}
+				}
+
+				//处理对象的数
+				//将fido.loves的值赋值给like
+				var like = fido.loves;
+				var likes = "Fido like";
+				for(var i=0;i<like.length;i++){
+					likes+=" "+like[i];
+				}
+				alert(likes);
+			}
+			//页面加载完之后，立即访问这个函数
+			window.onload = init;
+		</script>
+	</head>
+	<body>
+		
+	</body>
+</html>

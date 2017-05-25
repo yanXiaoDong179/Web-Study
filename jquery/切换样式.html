@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+	<meta charset="utf-8">
+	<title>切换样式</title>
+	<script type="text/javascript" src="js/jquery-3.2.1.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			//获取class=menu的元素
+			$(".menu").html("<strong>重新设置html文本</strong>");
+			var li_html = $(".menu");
+			alert(li_html.html());	//返回元素内的html文本
+			alert(li_html.text());	//返回元素内的文本内容
+
+				//children()方法获取父元素下所有子元素
+			var $ul = $("ul").children();
+			alert($ul.text());
+
+				//next()方法取得元素后的同辈元素
+			var $nx = $("ul li:first-child").next();
+				//返回结果：标签二
+			alert($nx.text());
+
+				//prev()方法，取得匹配元素前的同辈元素
+
+				//siblings()方法，取得匹配元素前后所有的同辈元素
+
+			$(".menu").click(function(){
+				var $sibling = $(this).siblings();
+					//生成一个1~8的随机数
+				var i = Math.floor(Math.random()*8);
+				$($sibling).removeClass("active");
+				$($sibling[i]).addClass("active");
+				// 	//如果元素class含有active
+				// if($($sibling[i]).hasClass("active")){
+				// 		//清除class
+				// 	$($sibling).removeClass("active");
+				// }else{
+				// 	$($sibling[i]).addClass("active");
+				// }	
+			})
+		});
+	</script>
+	<style type="text/css">
+		.main{
+			margin:50px auto;
+			width:600px;
+			box-sizing: border-box;
+		}
+		.main ul{
+			padding:0;
+			margin:0;
+			width:100%;
+			overflow: auto;
+			list-style: none;
+		}
+		.main ul li {
+			text-align: center;
+			width:200px;
+			line-height: 200px;
+			height:200px;
+			float:left;
+		}
+		.menu{
+			background-color:#1CBCC8;
+			color:#fff;
+			font-weight:bold;
+			font-family:SimSun;
+			font-size:18px;
+			cursor:pointer;
+		}
+		.menu:hover{
+			background-color:#21DAE8;
+		}
+		.active{
+			background-color:#DFC543;
+			color:#fff;
+		}
+	</style>
+</head>
+<body>
+<div class="main">
+	<ul>
+		<li>标签一</li>
+		<li>标签二</li>
+		<li>标签三</li>
+		<li>标签四</li>
+		<li class="menu">点击切换</li>
+		<li>标签六</li>
+		<li>标签七</li>
+		<li>标签八</li>
+		<li>标签九</li>
+	</ul>
+</div>
+</body>
+</html>

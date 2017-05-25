@@ -1,0 +1,28 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>插入节点appendChild()</title>
+</head>
+<body>
+
+<ul id="test">
+  <li>JavaScript</li>
+  <li>HTML</li>
+</ul> 
+ 
+<script type="text/javascript">
+	//获取父级UL的元素节点
+  var otest = document.getElementById("test");
+  	//createElement()方法
+  	//返回一个Element对象  
+  var newnode = document.createElement("li");
+  	//
+  newnode.innerHTML = "PHP";
+  	//appendChild()方法在父级节点的最后一个子节点的后面添加一个子节点
+  otest.appendChild(newnode);
+          
+</script> 
+
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>document</title>
+	<script type="text/javascript">
+		// function People(){
+
+		// }
+		// People.prototype.say=function(){
+		// 	alert("hello");
+		// }
+		// function Student(){
+
+		// }
+		// Student.prototype = new People();
+		// var s = new Student;
+		// s.say();
+
+		function Person(name){
+			var _this = {}
+			_this._name = name;
+			_this.sayHello = function(){
+				alert("Hello"+_this._name)
+			}
+			return _this;
+		}
+		function Teacher(name){
+			var _this = Person(name);
+			var superSay = _this.sayHello;
+			_this.sayHello = function(){
+				superSay.call(_this);
+				alert("t Hello"+_this._name);
+			}
+			return _this;
+		}
+		var t = Teacher("Lyle");
+		t.sayHello();
+	</script>
+</head>
+
+<body>
+
+</body>
+</html>

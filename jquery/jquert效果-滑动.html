@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+	<meta charset="utf-8">
+	<title>jquert效果-滑动</title>
+	<script type="text/javascript" src="js/jquery-3.2.1.js"></script>
+	<style type="text/css">
+		#panel,#panel2,#panel3{
+			margin-top:10px;
+			width:200px;
+			height:200px;
+			border:1px solid red;
+		}
+		#panel,#panel3{
+			display:none;
+		}
+	</style>
+	
+</head>
+<body>
+<button type="button" id="flip">点我点我</button>
+<div id="panel">
+	可爱的我出现了！！！
+</div>
+<div id="panel2">
+	会消失的哦！
+</div>
+<div id="panel3">
+	会消失/显示的哦！
+</div>
+<script type="text/javascript">
+		/*	通过 jQuery，您可以在元素上创建滑动效果。
+			jQuery 拥有以下滑动方法：
+			slideDown()
+			slideUp()
+			slideToggle()	
+			有两个参数可以添加，第一个是实现的速度，第二个是回掉函数*/
+		//
+		/*	slideDown() 方法	*/
+		$("#flip").click(function(){
+		  $("#panel").slideDown("slow");	//向下滑动元素
+		});
+
+		/*	slideUp() 方法用于向上滑动元素	*/
+		$("#flip").click(function(){
+		  $("#panel2").slideUp("slow");
+		});
+
+		/*	slideToggle() 方法可以在 slideDown() 与 slideUp() 方法之间进行切换*/
+		$("#flip").click(function(){
+		  $("#panel3").slideToggle(1000,function(){
+		  	alert("The paragraph is now hidden");
+		});
+
+		});
+	</script>
+</body>
+</html>

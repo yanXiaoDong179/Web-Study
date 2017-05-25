@@ -1,0 +1,30 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>创建元素节点createElement&setAttribute</title>
+</head>
+<body>
+<script type="text/javascript">
+var main = document.body;
+
+//创建链接
+function createa(url,text)
+{
+	//创建一个a标签的元素节点，返回Element对象
+    var a = document.createElement("a");
+    var p = document.createElement("p");
+    //setAttribute()方法
+    //设置a标签的href属性
+    a.setAttribute("href",url);
+    //设置a,p标签的innerHTML属性
+    a.innerHTML=url;p.innerHTML=text;
+    //在body插入创建的元素节点
+    main.appendChild(a);
+    main.appendChild(p);
+}
+// 调用函数创建链接
+createa('http://www.imooc.com','慕课网');
+</script> 
+</body>
+</html>

@@ -1,0 +1,79 @@
+.home{
+	position: absolute;
+	top:0;
+	left:-100px;
+	width:80px;
+}
+.home a img{
+	width:17px;
+	margin-top: 19px;
+	margin-right:5px;
+	vertical-align: top;
+}
+/*用户信息修改*/
+.content table{
+	margin-left:35px;
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+.content table tr{
+	border-bottom: 1px solid #f0f0f0;
+}
+.content table tr:last-child{
+	border:none;
+}
+.content table tr td:nth-child(1){
+	width:120px;
+	font-size:15px;
+	padding:15px 0;
+}
+.content table tr td:nth-child(2){
+	width:400px;
+	font-size:15px;
+	padding:15px 0;
+}
+input[type="text"]{
+	color:#333;
+	padding: 5px 10px;
+	font-size: 15px;
+	border: 1px solid #c8c8c8;
+	border-radius: 4px;
+	background-color: hsla(0,0%,71%,.1);
+}
+textarea{
+	min-width:400px;
+	max-width: 800px;
+	height:150px;
+	padding:2px;
+	font-size:14px;
+}
+input[type="text"]:focus,textarea:focus{
+	border:1px solid #A5C7FE;
+}
+.save{
+	display: inline-block;
+	font-weight: 400;
+	text-align: center;
+	touch-action: manipulation;
+	padding: 6px 12px;
+	font-size: 14px;
+	color:#fff;
+	background-color:#42C02E;
+	cursor:pointer;
+	width: 100px;
+	margin:10px 35px 10px;
+	border-radius: 4px;
+	border: none;
+}
+.save:hover{
+	background-color: #3DB922;
+}
+.error{
+	font-size: 12px;
+	font-family:SimHei;
+	font-style:normal;
+	height:29px;
+	line-height: 29px;
+	margin-left:5px;
+	color:red;
+}

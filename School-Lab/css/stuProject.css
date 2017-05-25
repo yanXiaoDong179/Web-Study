@@ -1,0 +1,34 @@
+/*实验查询-学生-高校实验预约管理系统*/
+.content div:nth-of-type(1){
+	border-bottom:1px solid #DEE1E3;
+	margin-bottom:15px;
+	font-size: 0;
+}
+.title{
+	display:inline;
+	cursor: pointer;
+	height:28px;
+	padding:5px 5px 0 5px;
+	margin:0;
+	border:none;
+	margin-left:1px;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+	color:#fff;
+	background-color:#A7A79D;
+}
+.title:hover{
+	color:#fff;
+	background-color:#EA6F5A;
+}
+.page{
+	position: relative;
+}
+.page table{
+	position: absolute;
+	display:none;
+}
+.onfocus{
+	color:#fff;
+	background-color:#EA6F5A;
+}

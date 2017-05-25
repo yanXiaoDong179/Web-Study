@@ -1,0 +1,46 @@
+/*NEW*/
+/*清除默认样式*/
+body,ul,li,p,h1,h2,h3,h4,h5,h6,img,br,hr,table,tr,td,dl,dt,dd,form {
+	margin: 0;
+	padding: 0;
+	font-weight: normal;
+}
+
+body {
+	font-family: Arial,"Microsoft YaHei";
+	font-size: 14px;
+	color: #434343;
+}
+
+ol,ul,li {
+	list-style: none;
+}
+
+img {
+	border: none;
+}
+/*一般链接*/
+a {
+	text-decoration: none;
+}
+
+/*.claerfloat{
+	zoom:1;
+}
+.clearfloat:after{
+	display:block;
+	clear:both;
+	content:"";
+	visibility: hidden;
+	height:0;
+}*/
+
+/*CSS3新加入神奇*/
+/*传统盒子模型的二维 = 自己设置的高度/宽度 + padding + border + margin*/
+/*运用这个神器后*/
+/*盒子的二维 = 自己设置的高度/宽度 + margin*/
+* {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}

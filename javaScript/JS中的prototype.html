@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+	<meta charset="utf-8">
+	<title>JS中的prototype</title>
+	<script type="text/javascript" >
+		//创建一个函数对象
+		function employee(name,job,born)
+		{
+			this.name=name;
+			this.job=job;
+			this.born=born;
+		}
+		// 实例化一个对象
+		var bill=new employee("Bill Gates","Engineer",1985);
+		//在employee对象内新增一个属性salary
+		//使用 prototype 来向对象添加属性
+		employee.prototype.salary=null;
+		//对实例化的对象进行属性赋值
+		bill.salary=20000;
+		document.write(bill.salary);
+	</script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+	<meta charset="utf-8">
+	<title>图片提示</title>
+	<link rel="stylesheet" type="text/css" href="css/Nreset.css">
+	<script type="text/javascript" src="js/jquery-3.2.1.js"></script>
+	<style type="text/css">
+		ul{
+			overflow: auto;
+			font-size: 0px;
+		}
+		ul li {
+			margin-right:20px;
+			float:left;
+		}
+		ul li:first-child{
+			margin-left:20px;
+		}
+		ul li:last-child{
+			margin:0;
+		}
+		.tooltip img{
+			width:150px;
+		}
+		#tooltip{
+			position: absolute;
+			top:0;
+			left:0;
+			width:250px;
+		}
+	</style>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			var x=10;
+			var y=20;
+				//添加鼠标上浮事件
+			$(".tooltip").mouseover(function(e){
+					//title属性赋值给myTitle
+				this.myTitle = this.title;
+					//清空title属性值
+				this.title="";
+					//
+				var imgTitle = this.myTitle?"<br/>"+this.myTitle : "";
+					//创建一个div
+				var tooltip = "<div id='tooltip'><img src='"+this.href+"'/>"+imgTitle+"</div>";
+					//将div追加到文档中
+				$("body").append(tooltip);
+					//设置div的css
+				$("#tooltip").css({
+						//设置x坐标和y坐标
+					"top":(e.pageY+y)+"px",
+					"left":(e.pageX+x)+"px"
+				}).show("fast");	//显示
+			}).mouseout(function(){		//追加一个鼠标移出事件
+				this.title = this.myTitle;	//title还原，否者就没有title值了
+				$("#tooltip").remove();		//将之前追加的div移除
+			})
+				//添加一个鼠标移动事件
+			$("a.tooltip").mousemove(function(e){
+					//动态修改div的坐标
+				$("#tooltip").css({
+					"top":(e.pageY+y)+"px",
+					"left":(e.pageX+x)+"px"
+				});
+			});
+		})
+	</script>
+</head>
+<body>
+<ul>
+	<li><a href="img/img-01 (1).png" class="tooltip" title="测试图片">
+		<img src="img/img-01 (1).png" alt="测试图片" />
+	</a></li>
+	<li><a href="img/img-01 (2).png" class="tooltip" title="测试图片">
+		<img src="img/img-01 (2).png" alt="测试图片" />
+	</a></li>
+	<li><a href="img/img-01 (3).png" class="tooltip" title="测试图片">
+		<img src="img/img-01 (3).png" alt="测试图片" />
+	</a></li>
+	<li><a href="img/img-01 (4).png" class="tooltip" title="测试图片">
+		<img src="img/img-01 (4).png" alt="测试图片" />
+	</a></li>
+	<li><a href="img/img-01 (5).png" class="tooltip" title="测试图片">
+		<img src="img/img-01 (5).png" alt="测试图片" />
+	</a></li>
+	<li><a href="img/img-01 (6).png" class="tooltip" title="测试图片">
+		<img src="img/img-01 (6).png" alt="测试图片" />
+	</a></li>
+	<li><a href="img/img-01 (7).png" class="tooltip" title="测试图片">
+		<img src="img/img-01 (7).png" alt="测试图片" />
+	</a></li>
+	<li><a href="img/img-01 (8).png" class="tooltip" title="测试图片">
+		<img src="img/img-01 (8).png" alt="测试图片" />
+	</a></li>
+</ul>
+</body>
+</html>

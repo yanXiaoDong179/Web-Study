@@ -1,0 +1,35 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>节点属性</title>
+</head>
+<body>
+  <ul>
+     <li>javascript</li>
+     <li>HTML/CSS</li>
+     <li>jQuery</li>     
+  </ul>
+  <script type="text/javascript">
+    //创建一个输出函数
+    function Println(s){
+      document.write(s+"</br>");
+    }
+    var node = document.getElementsByTagName("li");
+    for(var i=0;i<node.length;i++){
+        //获取节点的名称
+        var name = node[i].nodeName;
+        //获取节点的值
+        //节点的值是另一种节点，其值是该节点的第一个子节点
+        //chileNodes[0]==firstChild
+        var value = node[i].childNodes[0].nodeValue;
+        //获取节点的类型
+        var type = node[i].nodeType;
+        //调用输出函数输出
+        Println("节点名称:"+name);
+        Println("节点的值:"+value);
+        Println("节点的类型:"+type)
+    }
+  </script>
+</body>
+</html>

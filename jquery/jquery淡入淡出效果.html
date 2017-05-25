@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+	<meta charset="utf-8">
+	<title>jquery淡入淡出效果</title>
+	<script type="text/javascript" src="js/jquery-3.2.1.js"></script>
+	<style type="text/css">
+		#div1{
+			width:500px;
+			height:200px;
+			background-color: red;
+			color:#fff;
+		}
+		#div2{
+			width:200px;
+			height:200px;
+			background-color: blue;
+			color:#fff;
+		}
+		#div3{
+			width:400px;
+			height:300px;
+			background-color: green;
+			color:#fff;
+		}
+	</style>
+</head>
+<body>
+<button type="button">显示/隐藏</button>
+<div id="div1">
+	盒子1
+</div>
+<div id="div2">
+	盒子2
+</div>
+<div id="div3">
+	盒子3
+</div>
+
+<script type="text/javascript">
+	/*jQuery fadeIn() 方法*/
+	$(document).ready(function(){
+		// $("button").click(function(){
+		// 	$("#div1").fadeIn();
+		// 	$("#div2").fadeIn("slow");
+		// 	$("#div3").fadeIn(3000);
+		// });
+		// $("button").click(function(){
+		// 	$("#div1").fadeOut();
+		// 	$("#div2").fadeOut("slow");
+		// 	$("#div3").fadeOut(3000);
+		// });
+		$("button").click(function(){
+			$("#div1").fadeToggle();
+			$("#div2").fadeToggle("slow");
+			$("#div3").fadeToggle(3000);
+		});
+	})
+</script>
+</body>
+</html>

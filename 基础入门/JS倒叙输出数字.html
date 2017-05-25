@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+	<meta charset="utf-8">
+	<title>倒叙输出数字</title>
+	  <script type="text/javascript">
+        window.onload=function f2(){
+            var a=123456789;   //定义a的值
+            var b=0;    //定义b的值
+            var c= new Array;	//定义一个空数组c  
+            var sum = "";//定义sum的值
+            //for循环
+            for(var i=0;i<1000;i++){     
+                if(a>0){   
+                    b=a%10; 
+                    a=(a-b)/10;
+                    c[i]=b; 
+                }
+                else{
+                	break;
+                }document.write(c[i]);
+            }
+            
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>

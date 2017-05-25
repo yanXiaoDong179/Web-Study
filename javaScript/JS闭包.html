@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+	<meta charset="utf-8">
+	<title>JS闭包</title>
+</head>
+<body>
+
+<script type="text/javascript">
+	// function f1(){
+	// 	var n=999;
+
+	// 	function f2(){	//
+	// 		alert(n);	//
+	// 	}
+	// 	return f2;			//返回函数的引用
+	// 	//return f2();		//返回函数执行结果
+	// };
+	// //若返回的是一个引用return f2; 则需使用f1()();
+	// //若返回的是函数的执行结果，则需使用f1();
+	// f1()();	
+
+	// var result = f1();
+	// result();
+
+// 	var name = "The Window";
+
+// 　　var object = {
+// 　　　　name : "My Object",
+
+// 　　　　getNameFunc : function(){
+// 　　　　　　var that = this;
+// 　　　　　　return function(){
+// 　　　　　　　　return that.name;
+// 　　　　　　};
+
+// 　　　　}
+
+// 　　};
+
+// 　　alert(object.getNameFunc()()); 
+	
+	var name = "The Window";
+
+　　var object = {
+　　　　name : "My Object",
+
+　　　　getNameFunc : function(){
+　　　　　　return function(){
+　　　　　　　　return this.name;
+　　　　　　};
+
+　　　　}
+
+　　};
+
+　　alert(object.getNameFunc()());
+</script>
+</body>
+</html>

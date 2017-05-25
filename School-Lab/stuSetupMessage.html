@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="zh-cmn-Hans">
+	<head>
+		<meta charset="utf-8">
+		<meta name="author" content="lyle">
+		<title>修改信息-高校实验预约管理系统</title>
+		<link rel="stylesheet" href="css/labPublic.css"/>
+		<link rel="stylesheet" href="css/nav.css">
+		<link rel="stylesheet" href="css/stuSetupMessage.css">
+	</head>
+	<body>
+	<!-- 页眉 -->
+		<header>
+			<img src="img/logo-3.png" alt="logo">
+			<ul class="vice-nav">
+				<li>
+					<a href="">
+					<img src="img/user.png" alt="message">鄢小冬</a>
+					<ul>
+						<li><a href="stuInformation.html">
+							<i class="iconfontTwo icon-geren"></i>个人信息</a></li>
+						<li><a href="stuSetupPassword.html">
+							<i class="iconfontTwo icon-shezhi"></i>修改密码</a></li>
+						<li><a href="stuSetupMessage.html">
+							<i class="iconfontTwo icon-shezhi"></i>修改资料</a></li>
+						<li><a href="logIn.html">
+							<i class="iconfontTwo icon-tuichu"></i>退出系统</a></li>
+					</ul>
+				</li>
+				<li class="home">
+					<a href="homeStudent.html">
+					<img src="img/home.png">首页</a>
+				</li>
+			</ul>
+		</header>
+		<div class="main">
+		<!-- 导航 -->
+			<ul class="nav">
+		        <li url=" "><a href="stuInformation.html">个人信息</a></li>
+		        <li url=" "><a href="stuSetupPassword.html">修改密码</a></li>
+		        <li url=" "><a href="stuSetupMessage.html"  class="on">修改资料</a></li>
+			</ul>
+		<!-- 内容展示 -->
+			<div class="content">
+				<p class="title">用户信息修改</p>
+				<table>
+					<tr>
+						<td>用户名</td>
+						<td>
+							<input type="text" name="userid" value="" readonly>
+						</td>
+					</tr>
+					<tr>
+						<td>姓名</td>
+						<td>
+							<input type="text" name="Pname" value="" readonly>
+						</td>
+					</tr>
+					<tr>
+						<td>性别</td>
+						<td>
+							<select name="sex">
+								<option value="boy" selected="selected">男</option>
+								<option value="girl">女</option>
+							</select>
+						</td>
+					</tr>
+					<tr>
+						<td>专业</td>
+						<td>
+							<input type="text" name="status" value="" readonly>
+						</td>
+					</tr>
+					<tr>
+						<td>电话</td>
+						<td>
+							<input type="text" name="phone" placeholder="请输入联系电话" value="">
+							<em class="error">错误验证</em>	<!-- em 返回错误信息 -->
+						</td>
+					</tr>
+					<tr>
+						<td>其他</td>
+						<td>
+						 	<textarea name="otherinfo" placeholder="其他信息">复制粘贴</textarea>
+						</td>
+					</tr>
+				</table>
+				<input type="submit" value="保存" name="" class="save">
+			</div>
+		</div>
+	<!-- 页脚 -->
+		<footer>
+			
+		</footer>
+	</body>
+</html>

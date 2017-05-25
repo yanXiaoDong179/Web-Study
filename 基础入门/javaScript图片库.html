@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="css/Nreset.css">
+	<title>javaScript图片库</title>
+	<style type="text/css">
+		h1{
+			line-height: 100px;
+			padding-left: 50px;
+		}
+		ul{
+			float:left;
+			padding:0 50px;
+
+		}
+		ul li{
+			width:100px;
+			background-color: #333;
+			margin-bottom: 1px;
+			text-align: center;
+		}
+		ul li a{
+			font-size: 18px;
+			line-height: 30px;
+			color:#fff;
+			
+		}
+		.img{
+			float:left;
+			width:500px;
+			min-height: 200px;
+		}
+	</style>
+	
+	<script>
+		function showPic(whichpic){
+
+			// 将whichpic<a>标签里的href属性赋值给soure
+			var source = whichpic.getAttribute("href");
+
+			//返回一个id为placeholder对象的引用
+			var placeholder = document.getElementById("placeholder");
+
+			//将制定标签内的src属性值替换为source
+			placeholder.setAttribute("src",source);
+		}
+		function gallery(){
+			var pic = document.getElementById("image");
+			//遍历image元素中的所有a标签
+			var links = pic.getElementsByTagName("a");
+			for(var i=0;i<links.length;i++){
+				links[i].onclick = function(){
+					showPic(this);
+					return false;
+				}
+			}
+		}
+		// window.onload=gallery;
+		//把现有的window.onload事件处理函数存入变量onload
+		//如果在这个函数上没有绑定任何函数，就像平时那样把新函数添加给他
+		//如果这个函数上已经绑定了一些函数，就把新函数追加到已有函数的后面
+		function addLoadEvent(func){
+			var oldonload = window.onload;
+			if(typeof window.onload != 'function'){
+				window.onload = func;
+			}
+			else{
+				window.onload = function(){
+					oldonload();
+					func();
+				}
+			}
+		}
+		addLoadEvent(gallery);
+	</script>
+</head>
+<body>
+<h1>javaScript</h1>
+<ul id="image">
+	<li><a href="img/img-01 (1).png" title="" >快来点我</a></li>
+	<li><a href="img/img-01 (2).png" title="" >picture-2</a></li>
+	<li><a href="img/img-01 (3).png" title="" >picture-3</a></li>
+	<li><a href="img/img-01 (4).png" title="" >picture-4</a></li>
+	<li><a href="img/img-01 (5).png" title="" >picture-5</a></li>
+	<li><a href="img/img-01 (6).png" title="" >picture-6</a></li>
+	<li><a href="img/img-01 (7).png" title="" >picture-7</a></li>
+	<li><a href="img/img-01 (8).png" title="" >picture-8</a></li>
+	<li><a href="img/img-01 (9).png" title="" >picture-9</a></li>
+</ul>
+<div class="img" >
+	<img id="placeholder" src="">
+</div>
+</body>
+</html>

@@ -1,0 +1,120 @@
+
+/*登录界面CSS*/
+body{
+	overflow: auto;
+	position: relative;
+	min-width: 500px;
+	background-image:url("../img/login-2.jpg");
+	background-position: top;
+	background-size: cover;
+	background-repeat: no-repeat;
+	width:100vw;
+	height:100vh;
+}
+img[alt="logo"]{
+		background:rgba(250,250,250,0.5);
+	}
+h2{
+	position:absolute;
+	top:117px;
+	left:10%;
+	width:76%;
+	background-color:rgba(121,125,126,0.5);
+	font-size: 32px;
+	font-family:"SimSun","SimHei";
+	line-height:50px;
+	text-align: center;
+	color:#fff;
+}
+.main{
+	width:26%;
+	padding:10px;
+	border-radius:10px;
+	background-color:rgba(250,250,250,0.6);
+	position: absolute;
+	left:60%;
+	top:197px;
+}
+.main > p{
+	font-size: 20px;
+	color:#1765D9;
+	line-height: 40px;
+	border-bottom: 3px solid #1765D9;
+}
+form span{
+	display:block;
+	height:35px;
+	line-height: 35px;
+	margin-left:15%;
+	color:red;
+}
+input[type="text"], input[type="password"]{
+	/*display:block;*/
+	font-size:14px;
+	color:#373D46;
+	width:74%;
+	min-width: 200px;
+	height:40px;
+	margin:0 13% 3.5% 13%;
+	padding-left: 10px;
+	border:2px solid #9CA6B6;
+	border-radius:10px;
+	outline:0;
+}
+input:hover{
+		border:2px solid #1765D9;
+	}
+input:focus{
+	border:2px solid #1765D9;
+}
+/*input[type="checkbox"]{
+	margin: 0;
+	padding:0;
+	margin-left:13%;
+	vertical-align: middle;
+}*/
+/*form h5{
+	display:inline;
+	font-size: 13px;
+	color:#71707B;
+	vertical-align: middle;
+}*/
+form a{
+	text-decoration: none;
+	margin-left:66%;
+}
+input[type="button"]{
+	width:74%;
+	height:40px;
+	border-radius: 10px;
+	border:0;
+	background-color:#12aee7;
+	color:#fff;
+	margin:10px 13%;
+	font-size:18px;
+	font-family:Microsoft YaHei;
+}
+input[type="button"]:hover{
+	cursor:pointer;  
+	background-color: #004DFE;
+}
+/*当浏览器宽度小于1120px时应用一下属性*/
+@media all and (max-width: 1120px){
+	.main{
+		position: absolute;
+		width:292px;
+		left:50%;
+		margin-left:-146px;
+	}
+	input[type="text"], input[type="password"]{
+		/*display:block;*/
+		font-size:14px;
+		color:#373D46;
+		min-width: 200px;
+		height:40px;
+		margin:0 36px 8px 36px ;
+		padding-left: 10px;
+		border:2px solid #9CA6B6;
+		border-radius:6px;
+	}
+}

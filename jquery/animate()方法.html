@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+	<meta charset="utf-8">
+	<title>animate()方法</title>
+	<script type="text/javascript" src="js/jquery-3.2.1.js"></script>
+	<style type="text/css">
+		.box1{
+			width:200px;
+			height:200px;
+			position: relative;
+			border:1px solid #0050DD;
+			background-color: #96E555;
+			cursor:pointer;
+			color:#fff;
+			text-align: center;
+		}
+		.box1:hover{
+			animation:myfirst 5s;	/*CSS3创建一个时间为5S的动画*/
+		}
+			/*动画的效果*/
+		/*@keyframes myfirst
+		{
+			0%   {background:red; left:0px; top:0px;}
+			25%  {background:yellow; left:200px; top:0px;}
+			50%  {background:blue; left:200px; top:200px;}
+			75%  {background:green; left:0px; top:200px;}
+			100% {background:red; left:0px; top:0px;}
+		}
+
+		@-webkit-keyframes myfirst 
+		{
+			0%   {background:red; left:0px; top:0px;}
+			25%  {background:yellow; left:200px; top:0px;}
+			50%  {background:blue; left:200px; top:200px;}
+			75%  {background:green; left:0px; top:200px;}
+			100% {background:red; left:0px; top:0px;}
+		}*/
+	</style>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			// $(".box1").click(function(){
+			// 	$(this).animate({left:"500px"},3000)
+			// 		.animate({width:"300px",top:"200px"},2000,function(){
+			// 			$(this).css("border","5px solid blue");	//回调函数callback();
+			// 		});
+			// });
+
+			$(".box1").hover(function(){
+				$(this).stop(true,true)
+					.animate({height:"300"},1000)
+					.animate({width:"150"},1000);
+			},function(){
+				$(this).stop(true,true)
+				.animate({width:"400"},1000)	
+				.animate({height:"200"},1000);
+			});
+		})
+	</script>
+</head>
+<body>
+<div class="box1">
+	<h3>会移动的盒子</h3>
+</div>
+</body>
+</html>

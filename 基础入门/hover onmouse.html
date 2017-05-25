@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="zh-cmn-Hans">
+	<head>
+		<meta charset="utf-8">
+		<meta name="author" content="lyle">
+		<title>点击后变长</title>
+		<link rel="stylesheet" href="css/Nreset.css">
+		<style>
+			body{
+				-webkit-font-smoothing: antialiased;
+			}
+			form{
+				margin:20px 0 0 20px;
+			}
+			.user,.username{
+				height:60px;
+				font-size: 16px;
+				font-family:; SimSun;
+				text-align: left;
+				
+			}
+			.user{
+				width:60px;
+				padding-left:5px;
+				border-radius:30px;
+				background-color:#5F6062;
+				color:#ffffff;
+				border:0;
+			}
+			.username{
+				width:260px;
+				padding:10px;
+				border-radius: 30px;
+				border:1px solid #5F6062;
+				color:#000;
+				background-color:#E3E4E4; 
+			}
+			.user:hover{
+				cursor:pointer;
+				border:2px solid #1765D9;
+				width:260px;
+				padding:10px;
+				border-radius: 30px;
+				color:#000;
+				background-color:#E3E4E4; 
+			}
+			input:focus{
+				border:2px solid #1765D9;
+			}
+			}
+		</style>
+	</head>
+	<body>
+		<form>
+			<input class="user" onmousedown="this.className='username'" type="text" name="username" placeholder="用户名">
+		</form>
+	</body>
+</html>

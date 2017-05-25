@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+	<meta charset="utf-8">
+	<title>getAttribute()方法</title>
+</head>
+<body>
+	<h1 id="link" title="getAttribute()获取标签的属性" onclick="Hattr(this)">点击获取标签属性</h1>
+	<!-- this指向当前元素节点 -->
+</body>
+<script type="text/javascript">
+	function Hattr(obj){
+		// 获取id属性的值
+		var atrr1 = obj.getAttribute("id");
+		// 获取title属性的值
+		var atrr2 = obj.getAttribute("title");
+		// childNodes属性可以用来获取任何一个元素的所有子元素
+		// nodeValue可以获取一个节点的值
+		//元素本身的nodeValue属性是一个空值，我想得到的其实是<h1>元素所包含的文本的值
+		//包含在<p>元素里的文本是另一种节点，它是<p>元素的第一个子节点。因此，我想得到的其实是它的第一个子节点的nodeValue属性值
+		//第一个子节点的表示方方式：childNodes[0]或者是firstChild
+		var atrr3 = obj.childNodes[0].nodeValue;
+		alert(atrr1);
+		alert(atrr2);
+		alert(atrr3);
+	}
+</script>
+</html>

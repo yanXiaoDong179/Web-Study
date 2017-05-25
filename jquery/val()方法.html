@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>val()方法</title>
+	<script type="text/javascript" src="js/jquery-3.2.1.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+				//获得焦点是触发事件
+			$("#address").focus(function(){
+					//获取元素的value值
+				var txt_value = $(this).val();
+					//判断元素的value值是否为指定的
+				if(txt_value==this.defaultValue){
+						//修改元素的value值为空
+					$(this).val("");
+				}
+			})
+			$("#address").blur(function(){
+				var txt_value = $(this).val();
+				if(txt_value==""){
+					$(this).val("请输入邮箱");
+				}
+			})
+
+
+		})
+	</script>
+	<style type="text/css">
+		input{
+			display:block;
+			height:25px;
+			margin-top:20px;
+		}
+	</style>
+</head>
+<body>
+<input type="text" id="address" value="请输入邮箱" name=""/>
+<input type="text" id="password" value="请输入密码" name=""/>
+<input type="button" value="登录" name=""/>
+</body>
+</html>

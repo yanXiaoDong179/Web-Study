@@ -1,0 +1,82 @@
+/*课程预约-学生-高校实验预约管理系统*/
+.serach{
+	display: inline-block;
+	position: relative;
+	margin:10px 10px 10px 35px;
+	font-size: 0;
+	height:30px;
+	line-height: 30px;
+}
+.serach input{
+	width:230px;
+	height:30px;
+	padding-left:10px;
+	border:1px solid #DDDFD9;
+}
+.serach input:focus{
+	border-color: #A5C7FE;
+}
+.serach label{
+	font-size: 15px;
+	padding:0 10px;
+}
+.serach button{
+	position: absolute;
+	top:1px;
+	right:1px;
+	border:0;
+	height:28px;
+}
+.add{
+	display:inline-block;
+	font-size: 0;
+	height:30px;
+	margin:10px 3% 10px 35px;
+	float:right;
+}
+.add button{
+	font-size: 15px;
+	padding:0 10px;
+}
+
+.table,#navNotice,.table-score{
+	width:94%;
+	margin-left:3%;
+	border-collapse: collapse;
+	border-spacing: 0;
+	border-padding:10px;
+}
+.table tr td,#navNotice tr td,.table-score tr td{
+	min-width: 70px;
+	text-align: center;
+}
+.table thead td,#navNotice thead td,.table-score thead td{
+	font-size: 16px;
+	padding:7px 0;
+	background-color:#E9BC4C !important;
+}
+.table tbody td,#navNotice tbody td,.table-score tbody td{
+	padding:5px;
+}
+.table tbody tr:nth-of-type(2n+2){
+	background-color:#D1E0E9;
+}
+.table i:hover,#navNotice i:hover{
+	color:#EA6F5A;
+}
+.table a:focus i,#navNotice a:focus i{
+	color:#EA6F5A;
+}
+.score{
+	width:120px;
+}
+.submit{
+	width:75px;
+	height:30px;
+}
+#navNotice tr:hover,.table-score tr:hover{
+	background-color:#F5EFE0;
+}
+.onNotice{
+	background-color:#F5E7C8 !important;
+}

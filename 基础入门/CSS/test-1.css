@@ -1,0 +1,53 @@
+
+/*下拉菜单-1css*/
+body{
+	height:500px;
+}
+.main{
+	
+	width:100%;
+}
+.main > ul{
+
+}
+.main>ul>li{
+	float:left;
+	width:150px;
+	text-align:center;
+	padding:10px;
+}
+.main>ul>li>a{
+	display:block;
+	background-color: #D7D8DA;
+	color:#353637;
+	font-size:18px;
+	line-height: 40px;
+	width:130px;
+}
+.main>ul>li>a:hover{
+	background-color:#5F6062;
+	color:#fff;
+}
+.menu ul{
+	display:none;
+}
+.menu1 ul{
+	display:block;
+}
+.menu1 ul li{
+	width:120px;
+	margin-left:5px;
+	margin-bottom: 3px;
+	text-align: center;
+}
+.menu1 ul li a{
+	display:block;
+	background-color:#D7D8DA;
+	color:#353637;
+	font-size:14px;
+	line-height: 30px;
+}
+.menu1 ul li a:hover{
+	background-color:#D25F18;
+	color:#fff;
+}

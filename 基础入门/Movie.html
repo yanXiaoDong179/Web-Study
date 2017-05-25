@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+	<meta charset="utf-8">
+	<title>movie</title>
+	<script>
+		
+			var movie1{
+				title:"INDEX",
+				genre:"Cult",
+				rating:5,
+				showtimes:["3:00pm","7:00pm","11:00pm"]
+			}
+			function getNextShowTimes(movie){
+				var now = new Date().getTime();
+
+				for(var i=0;i<movie.showtimes.length;i++){
+					//未能实现
+					var showtime = getTimeFromString(movie.showtimes[i]);
+					if((showtime - now ) > 0){
+						return "Next showing of "+ movie.title + "is" + movie.showtimes[i];
+					}
+					return null;
+				}
+			}
+			var next = getNextShowTimes(movie1);
+			alert(next);
+		
+	</script>
+</head>
+<body>
+
+</body>
+</html>

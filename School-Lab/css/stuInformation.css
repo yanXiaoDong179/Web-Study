@@ -1,0 +1,23 @@
+
+/*用户个人中心CSS*/
+.content table{
+	margin:20px 0 0 35px;
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+.content table tr{
+	border-bottom: 1px solid #f0f0f0;
+}
+.content table tr:last-child{
+	border:none;
+}
+.content table tr td:nth-child(1){
+	width:120px;
+	font-size:15px;
+	padding:20px 0;
+}
+.content table tr td:nth-child(2){
+	width:300px;
+	font-size:15px;
+	padding:20px 0;
+}

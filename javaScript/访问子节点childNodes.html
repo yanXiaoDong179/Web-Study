@@ -1,0 +1,30 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>访问子节点childNodes</title>
+</head>
+<body>
+<div>
+	javascript
+	<p>javascript</p>
+	<p>jQuery</p>
+	<h5>PHP</h5></div>
+<script type="text/javascript">
+ function Println(s){
+     document.write(s+"</br>");
+ }
+ var node = document.getElementsByTagName("div")[0];
+ var div_nodes = node.childNodes;
+ var last = node.lastChild;
+
+ alert(div_nodes.length);
+ for(var i=0;i<div_nodes.length;i++){
+ 	Println("DIV的第"+i+"个子节点的name属性是："+div_nodes[i].nodeName);
+ 	Println("DIV的第"+i+"个子节点的type属性是："+div_nodes[i].nodeType);
+ 	Println("DIV的第"+i+"个子节点的value属性是："+div_nodes[i].nodeValue);
+ }
+ Println("DIV的最后一个节点的子节点的Value属性是："+last.childNodes[0].nodeValue);
+</script>
+</body>
+</html>
