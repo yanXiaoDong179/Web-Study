@@ -1,0 +1,193 @@
+
+/*公共css库*/
+/* height */
+.h0{height:0;}
+.h14{height:14px;}
+.h16{height:16px;}
+.h18{height:18px;}
+.h20{height:20px;}
+.h22{height:22px;}
+.h24{height:24px;}
+.h30{height:30px;}
+/* width */
+/* fixed width value */
+.w20{width:20px;}
+.w50{width:50px;}
+.w70{width:70px;}
+.w100{width:100px;}
+.w120{width:120px;}
+.w140{width:140px;}
+.w160{width:160px;}
+.w180{width:180px;}
+.w200{width:200px;}
+.w220{width:220px;}
+.w250{width:250px;}
+.w280{width:280px;}
+.w300{width:300px;}
+.w320{width:320px;}
+.w360{width:360px;}
+.w400{width:400px;}
+.w460{width:460px;}
+.w500{width:500px;}
+.w600{width:600px;}
+.w640{width:640px;}
+.w700{width:700px;}
+/* line-height */
+.lh0{line-height:0;}
+.lh16{line-height:14px;}
+.lh16{line-height:16px;}
+.lh18{line-height:18px;}
+.lh20{line-height:20px;}
+.lh22{line-height:22px;}
+.lh24{line-height:24px;}
+.lh30{line-height:30px;}
+/* margin */
+.m0{margin:0;}
+.ml1{margin-left:1px;}
+.ml2{margin-left:2px;}
+.ml5{margin-left:5px;}
+.ml10{margin-left:10px;}
+.ml15{margin-left:15px;}
+.ml20{margin-left:20px;}
+.ml30{margin-left:30px;}
+.mr1{margin-right:1px;}
+.mr2{margin-right:2px;}
+.mr5{margin-right:5px;}
+.mr10{margin-right:10px;}
+.mr15{margin-right:15px;}
+.mr20{margin-right:20px;}
+.mr30{margin-right:30px;}
+.mt1{margin-top:1px;}
+.mt2{margin-top:2px;}
+.mt5{margin-top:5px;}
+.mt10{margin-top:10px;}
+.mt13{margin-top:13px;}
+.mt15{margin-top:15px;}
+.mt20{margin-top:20px;}
+.mt30{margin-top:30px;}
+.mb1{margin-bottom:1px;}
+.mb2{margin-bottom:2px;}
+.mb5{margin-bottom:5px;}
+.mb10{margin-bottom:10px;}
+.mb15{margin-bottom:15px;}
+.mb20{margin-bottom:20px;}
+.mb30{margin-bottom:30px;}
+/* padding */
+.p0{padding:0;}
+.p1{padding:1px;}
+.pl1{padding-left:1px;}
+.pt1{padding-top:1px;}
+.pr1{padding-right:1px;}
+.pb1{padding-bottom:1px;}
+.p2{padding:2px;}
+.pl2{padding-left:2px;}
+.pt2{padding-top:2px;}
+.pr2{padding-right:2px;}
+.pb2{padding-bottom:2px;}
+.pl5{padding-left:5px;}
+.p5{padding:5px;}
+.pt5{padding-top:5px;}
+.pr5{padding-right:5px;}
+.pb5{padding-bottom:5px;}
+.p10{padding:10px;}
+.pl10{padding-left:10px;}
+.pt10{padding-top:10px;}
+.pr10{padding-right:10px;}
+.pb10{padding-bottom:10px;}
+.p15{padding:15px;}
+.pl15{padding-left:15px;}
+.pt15{padding-top:15px;}
+.pr15{padding-right:15px;}
+.pb15{padding-bottom:15px;}
+.p20{padding:20px;}
+.pl20{padding-left:20px;}
+.pt20{padding-top:20px;}
+.pr20{padding-right:20px;}
+.pb20{padding-bottom:20px;}
+.p30{padding:30px;}
+.pl30{padding-left:30px;}
+.pt30{padding-top:30px;}
+.pr30{padding-right:30px;}
+.pb30{padding-bottom:30px;}
+/* font-size 字号*/
+.f0{font-size:0;}
+.fs12{font-size:12px;}
+.fs13{font-size:13px;}
+.fs14{font-size:14px;}
+.fs15{font-size:15px;}
+.fs16{font-size:16px;}
+.fs17{font-size:17px;}
+.fs18{font-size:18px;}
+.fs19{font-size:19px;}
+.fs20{font-size:20px;}
+.fs21{font-size:21px;}
+.fs22{font-size:22px;}
+.fs23{font-size:23px;}
+.fs24{font-size:24px;}
+.fs25{font-size:25px;}
+.fs26{font-size:26px;}
+.fs27{font-size:27px;}
+.fs28{font-size:28px;}
+/* font-family */
+.ffa{font-family:Arial;}
+.fft{font-family:Tahoma;}
+.ffv{font-family:Verdana;}
+.ffst{font-family:SimSun;}				/*宋体*/
+.ffyh{font-family:Microsoft YaHei;}		/*微软雅黑*/
+.ffht{font-family:SimHei;}				/*黑体*/
+.ffkt{font-family:KaiTi;}				/*楷体*/
+.fffs{font-family:FangSong;}			/*仿宋*/
+.ffxst{font-family:NSimSun;}
+/* text-align 水平对齐 */
+.tac{text-align:center;}
+.tar{text-align:right;}
+.tal{text-align:left;}
+.taj{text-align:justify;}	/*两端对齐*/
+/*font-style 字体风格*/
+.fsn{font-style:normal;}
+.fsi{font-style:italic;}	/*斜体*/
+.fso{font-style:oblique;}	/*偏斜*/
+/*font-weight 字体粗细*/
+.fwn{font-weight:normal;}	
+.fwb{font-weight:bold;}		/*粗*/
+.fwB{font-weight:bolder;}	/*特粗*/
+.fwl{font-weight:lighter;}	/*特细*/
+/*text-decoration 文字修饰*/
+.tdn{text-decoration: none;}
+.tdu{text-decoration:underline;}	/*上划线*/
+.tdo{text-decoration:overline;}		/*下划线*/
+.tdl{text-decoration:line-through;}	/*删除线*/
+.tdb{text-decoration: blink}		/*闪烁效果*/
+/*vertical-align 垂直对齐方式*/
+.vab{vertical-align: baseline;}		/*默认*/
+.vasub{vertical-align:sub;}			/*文字的下标*/
+.vasup{vertical-align:super;}		/*文字的上标*/
+.vat{vertical-align: top;}			/*垂直靠上对齐*/
+.vam{vertical-align: middle;}		/*垂直居中对齐*/
+.vatt{vertical-align: text-top;}	/*使元素和上级的字体向上对齐*/
+.vatb{vertical-align: text-bottom;}	/*使元素和上级的字体向下对齐*/
+
+/* ------------------- multiply CSS ------------------ */
+/* 块状元素水平居中 */
+.auto{margin-left:auto; margin-right:auto;}
+/* 清除浮动*/
+/* 基于display:table-cell的自适应布局 */
+/*.cell{display:table-cell; *display:inline-block; width:2000px; *width:auto;}*/
+/* 双栏自适应cell部分连续英文字符换行 */
+/*.cell2{overflow:hidden; _display:inline-block;}*/
+/* 单行文字溢出虚点显 示*/
+.ell{text-overflow:ellipsis; white-space:nowrap; overflow:hidden;}
+/* css3过渡动画效果 */
+.trans{
+    -webkit-transition:all .15s;	
+            transition:all .15s;
+}
+/* 大小不定元素垂直居中 */
+.dib_vm{display:inline-block; width:0; height:100%; vertical-align:middle;}
+/* 加载中背景图片 - 如果您使用该CSS小库，务必修改此图片地址 */
+.loading{background:url(about:blank) no-repeat center;}
+/* 无框文本框文本域 */
+.bd_none{border:0; outline:none;}
+/* 绝对定位隐藏 */
+.abs_out{position:absolute; left:-999em; top:-999em;}
+.abs_clip{position:absolute; clip:rect(0 0 0 0);}

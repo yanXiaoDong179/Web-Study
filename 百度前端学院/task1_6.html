@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>task1_6</title>
+	<style>
+	*{
+		margin:0;padding:0;
+	}
+	body{
+		height:1386px;width:980px;margin:auto;
+	}
+	.main{
+		width:892px;margin:auto;
+	}
+	.header{
+		height:61px;width:100%;border-bottom:2px solid #938e8c;
+		position:relative;margin-bottom:20px;
+	}
+	.logo{
+		height:21px;width:105px;font-family:SimHei;
+		font-size:12px;color:#ffffff;background-color:red;display:table;
+		padding:40px 0 0 5px;
+	}
+	.day{
+		font-family:SimHei;font-size:12px;color:#d45d5c;position: absolute;
+		right:0;top:42px;
+	}
+	.content-top{
+		width:892px;
+		overflow:hidden;
+		margin-bottom: 40px;
+	}
+	.ct-left{
+		width:641px;overflow: auto;float:left;
+	}
+	.bgimg_1{
+		overflow: auto;
+		display: block;
+		width:641px;height:301px;margin-bottom:20px;
+		background-image: url(https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1489077848648&di=d3ca11288f45a5d64c537a9a303c6a14&imgtype=0&src=http%3A%2F%2Ff.hiphotos.baidu.com%2Fzhidao%2Fpic%2Fitem%2F77c6a7efce1b9d1618550ce3f5deb48f8d5464a6.jpg);
+		background-repeat:no-repeat;
+	}
+	.bgimg1_11{
+		width:191px;
+		height:301px;
+		background-color:#3CB371;
+		opacity:0.5;
+		list-style: none;
+		display:block;
+		float: left;
+	}
+	.bgimg1_12{
+		width:191px;
+		height:301px;
+		background-color:#FFC0CB;
+		opacity:0.5;
+		list-style: none;
+		display:block;
+		float: right;
+	}
+	.ct-footer{
+		width:641px;margin-bottom:20px;
+	}
+	h3{
+		font-size: 16px;font-family:Microsoft YaHei; 
+		font-weight: bold;text-decoration:underline;
+		margin-bottom: 10px
+	}
+	.li1_1 {
+		width:220px;margin-right:20px;float:left;
+		list-style:none;
+	}
+		.li1_1 h3{
+			color:#418c59;
+		}
+		.li1_1 p{
+			font-size:12px;color:#767777;font-family:SimSun;
+			line-height: 16px;
+		}
+	.li1_2 {
+		width:220px;margin-right:20px;float:left;
+		list-style:none;
+	}
+		.li1_2 h3{
+			color:#d2994f;
+		}
+		.li1_2 p{
+			font-size:12px;font-family: Microsoft YaHei;
+			line-height: 16px;color:#231815;
+			opacity:0.7;
+		}
+	.li1_3 {
+		width:160px;
+		height:175px;
+		float:left;
+		list-style:none;
+		position: relative;
+		line-height: 20px;
+	}
+		.li1_3 h3{
+			color:#cc7680;
+		}
+		.li1_3 p{
+			font-size:12px;font-family: Microsoft YaHei;
+			color:#231815;
+			opacity:0.7;
+			display: inline;
+			float:left;
+		}
+	.li1_4{
+		width:160px;
+		position: absolute;
+		bottom:0;
+		left:0;
+	}
+	.li1_5{
+		font-size:12px;
+		color:red;
+		font-family: Microsoft YaHei;
+		opacity: 0.7;
+		font-style: italic;
+		float:left;
+		display: block;
+	}
+	.ct-right{
+		width:203px;height: 301px;
+		border-top:2px solid #cc8091;
+		padding-top: 5px;
+		float:right;
+		position: relative;
+	}
+	.ct-right h2{
+		font-weight:lighter;
+		font-size:24px;
+		line-height:40px;
+		color:#000000;
+		font-family: Microsoft YaHei;
+		text-decoration:underline;
+	}
+		.ct-right h2:first-letter{
+			font-size:30px;
+		}
+	.size_1{
+		font-size:12px;
+		color:#676767;
+		font-family:KaiTi_GB2312;
+		line-height: 10px
+		font-style:oblique;
+	}
+	.num{
+		font-size:116px;
+		color:#75b86b;
+		font-family:Microsoft YaHei;
+		font-style: italic;
+		margin:0 0 0 -16px;
+	}
+	.banner_1 ,.banner_2 ,.banner_3{
+		color:#cc8091;
+		font-family:Microsoft YaHei;
+		position: absolute;
+	}
+	.banner_1{
+		font-size:55px;
+		bottom:-10px;
+		left:0;
+	}
+	.banner_2{
+		font-size: 21px;
+		left:80px;
+		bottom:10px;
+	}
+	.banner_3{
+		font-size: 12px;
+		left:80px;
+		bottom:0px;
+	}
+	.content-bottom{
+		width:100%;
+		padding-bottom: 30px;
+		border-bottom:1px solid #938e8c;
+		overflow: auto;
+	}
+	.cb-left{
+		width:415px;
+		float:left;
+		overflow: auto;
+	}
+	.cb-left>span{
+		position:relative;
+		display:block;
+		width:415px;
+		margin-bottom:10px;
+		padding-bottom: 10px;
+		border-bottom: 2px solid #11456b;
+	}
+	.cb-left span h1{
+		font-size:72px;
+		color:#f5e327;
+		font-family:SimHei;
+		font-weight: bold;
+		font-style:italic; 
+		display:inline;
+	}
+	.cb-left span h1+p{
+		margin-left:25px;
+		display: inline;
+		font-size:42px;
+		color:#11456b;
+		line-height: 16px;
+		font-weight: bold;
+		font-family:SimHei;
+	}
+	/*.cb-left span h1+p+p{
+		display: inline;
+		font-size:42px;
+		color:#11456b;
+		line-height: 16px;
+		font-weight: bold;
+		font-family:SimHei;
+	}*/
+	.cb-left span h1+p+p{
+		font-size:33px;
+		font-weight: bold;
+		font-family:SimHei;
+		color:#11456b;
+	}
+	.first{
+		width:415px;
+		overflow: auto;
+	}
+	.first p{
+		font-size:12px;
+		color:#767777;
+		font-family:SimSun;
+		line-height: 16px;
+		display:inline;
+	}
+	.first >h1{
+		width:80px;
+		height:80px;
+		line-height: 80px;
+		font-size:70px;
+		color:#f5e327;
+		font-family:Microsoft YaHei;
+		float: left;
+	}
+	img[alt="前端学院"]{
+		width:180px;
+		height:250px;
+		display:inline;
+		margin:15px 0 15px 15px;
+		float:right;
+	}
+	.cb-right{
+		float:right;
+	}
+	.bgimg_2{
+		position: relative;
+		width:458px;
+		height:275px;
+		margin-bottom:40px;
+		background-image: url(http://r.photo.store.qq.com/psb?/V10s6CaX05tG57/qWn2VZZJaAP2mM8Z4ZWUGBfPm7xOFJSyArja.4KrrUg!/r/dG4BAAAAAAAA);
+	}
+	.bgimg2_1{
+		position: absolute;
+		bottom:0;
+		right:0;
+		width:458px;
+		height:61px;
+		background-color:#696969;
+		opacity:0.5;
+	}
+	.bgimg2_1>span{
+		position: absolute;
+		left:0;
+		bottom:10px;
+		font-size:26px;
+		color:#ffffff;
+		font-family:Microsoft YaHei;
+		height:44px;
+		line-height: 44px;
+		margin-left:30px;
+		padding-left:5px;
+		border-left:3px solid #72b16a;
+	}
+	.bgimg2_1 span+p{
+		position: absolute;
+		left:150px;
+		bottom:18px;
+		font-size:12px;
+		color:#72b16a;
+		font-family:Microsoft YaHei;
+		font-style: italic;
+		letter-spacing:140%;
+	}
+	.bgimg_3{
+		width:459px;
+		height:318px;
+		background-color:#FFE4C4;
+		overflow:hidden;
+		position: relative;
+	}
+	.bgimg_3>ul{
+		list-style:none;
+		margin:10px 0 0 50px;
+	}
+	.bgimg_3>ul li{
+		display:block;
+		margin-bottom: 10px;
+	}
+	.bgimg_3 ul li span{
+		display:inline-block;
+		font-size: 16px;
+		font-family: SimSun;
+		color:#5a5b5b;
+	}
+	.bgimg_3 ul li span+p{
+		display:inline-block;
+		font-size:12px;
+		color:#5a5b5b;
+		font-family:SimSun;
+		font-style:italic;
+		text-align: right;
+	}
+	.bgimg_3>ul li:before{
+		content: "";
+  		border-color: transparent transparent #11456b transparent;
+  		border-style: solid;
+  		border-width: 0em 0.4em 0.8em 0.4em;
+  		display: block;
+  		height:0;
+  		width:0;
+  		position: relative;
+  		left:-20px;
+  		bottom:-18px;
+	}
+	.bgimg_4{
+		width:260px;
+		height:86px;
+		padding:37px 0;
+		background-color:#FFB6C1;
+		position:absolute;
+		left:0;
+		bottom:0;
+		color:#ffffff;
+	}
+	.bgimg_4>span{
+		display: block;
+		float:left;
+		height:86px;
+		width:62px;
+		line-height: 86px;
+		padding:0 10px;
+		margin-right: 10px;
+		font-size:110px;
+		font-family:Microsoft YaHei;
+		border-right:2px solid #ffffff;
+	}
+	.bgimg_4 span + p,.bgimg_4 span+p+p{
+		font-size:21px;
+		font-family:SimHei;
+		line-height: 26px;
+		font-style: italic;
+	}
+	.bgimg_4 span+p+p+p ,.bgimg_4 span+p+p+p+p{
+		font-size:12px;
+		font-family: SimHei;
+		line-height:12px;
+	}
+	.b-right{
+		height:145px;
+		width:180px;
+		position: absolute;
+		right:0;
+		bottom:0;
+		font-family: SimHei;
+	}
+	.b-right span{
+		float:left;
+		display:block;
+		width:76px;
+		height:32px;
+		margin-top:-16px;
+		margin-left:-40px;
+		font-size: 72px;
+		color:#d45d5c;
+	}
+	.b-right span+p{
+		display: inline;
+		font-size: 14px;
+		color:#5a5b5b;
+		font-style: italic;
+		line-height: 16px;
+	}
+	.b-right span+p+p{
+		float:right;
+		display:block;
+		width:32px;
+		height:32px;
+		margin-top:-4px;
+		padding-right:20px;
+		font-size: 72px;
+		color:#d45d5c;
+	}
+	.footer{
+		width:100%;
+		margin-bottom: 30px;
+		position: relative;
+	}
+	.footer p{
+		font-size:12px;
+		color:#d45d5c;
+		font-family:SimHei;
+		position: absolute;
+		top:1px;
+		right:0;
+	}
+	</style>
+</head>
+<body>
+<div class="main">
+	<div class="header">
+		<span class="logo">ife.baidu.com</span>
+		<p class="day">2017.03</p>
+	</div>
+	<div class="content-top">
+		<div class="ct-left">
+			<ul class="bgimg_1">
+				<li class="bgimg1_11"></li>
+				<li class="bgimg1_12"></li>
+			</ul>
+			<!-- <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1489652014&di=d60fb69a163c2b235a664fd6cd358a67&imgtype=jpg&er=1&src=http%3A%2F%2Fimg1.mydrivers.com%2Fimg%2F20150503%2F065a5c291e084e88bf2b5d0857c193b4.jpg" alt="mac"> -->
+			<ul class="ct-footer">
+				<li class="li1_1">
+					<h3>What</h3>
+					<p>课程多数题目的解决方案都不是唯一的，这和我们在实际工作中的情况也是一致的。因此，我们的要求不仅仅是实现设计稿的效果，更是要多去思考不同的解决方案，评估不同方案的优劣，然后使用在该场景下最优雅的方式去实现。那些最终没有被我们采纳的方案，同样也可以帮助我们学到很多知识。所以，我们列出的参考资料未必是实现需求所必须的。</p>
+				</li>
+				<li class="li1_2">
+					<h3>When</h3>
+					<p>课程多数题目的解决方案都不是唯一的，这和我们在实际工作中的情况也是一致的。因此，我们的要求不仅仅是实现设计稿的效果，更是要多去思考不同的解决方案，评估不同方案的优劣，然后使用在该场景下最优雅的方式去实现。那些最终没有被我们采纳的方案，同样也可以帮助我们学到很多知识。所以，我们列出的参考资料未必是实现需求所必须的。</p>
+				</li>
+				<li class="li1_3">
+					<h3>How</h3>
+					<p>课程多数题目的解决方案</p>
+					<p>都不是唯一的，这和我们在实际工作中的情况也是一致的。</p>
+					<p>因此...</p>
+					<span class="li1_4">
+						<p>What--------</p><h7 class="li1_5">40%</h7>
+						<p>What--------</p><h7 class="li1_5">30%</h7>
+						<p>What--------</p><h7 class="li1_5">20%</h7>
+					</span>
+				</li>
+			</ul>
+		</div>
+		<div class="ct-right">
+			<h2>ABOUT</h2>
+			<h2>TECHNOLOGE</h2>
+			<p class="size_1">About technologe about technologe about technologe</p>
+			<p class="num">700</p>
+			<p class="banner_1">3.9</p>
+			<p class="banner_2">css</p>
+			<p class="banner_3">csscsscsscss</p>
+		</div>
+	</div>
+	<div class="content-bottom">
+		<div class="cb-left">
+			<span>
+				<h1>THE</h1>
+				<p>TECHNOLOGE OF FRONT</p>
+				<p>前端技术领域</p>
+			</span>
+			<div class="first">
+				<h1 >百</h1>
+				<p>度前端技术学院的课程任务是由百度前端工程师专为对前端不同掌握程度的同学设计。我们尽力保证课程内容的质量以及学习难度的合理性，但即使如此，真正决定课程效果的，还是你的每一次思考和实践<br>
+				&nbsp;&nbsp;课程多数题目的解决方案都不是唯一的，这和我们在实际工作中的情况也是一致的。因此，我们的要求不仅仅是实现设计稿的效果，更是要多去思考不同的解决方案，评估不同方案的优劣，然后使用在该场景下最优雅的方式去实现。那些最终没有被我们采纳的方案，同样也可以帮助我们学到很多知识。
+				<img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1489669195&di=adcf90e0c91045a4daa62941ed092e97&imgtype=jpg&er=1&src=http%3A%2F%2Fimg5.niutuku.com%2Fphone%2F1301%2F0635%2F0635-niutuku.com-358598.jpg" alt="前端学院">所以，我们列出的参考资料未必是实现需求所必须的。有的时候，实现题目的要求很简单，甚至参考资料里就有，但是背后的思考和亲手去实践却是任务最关键的一部分。在学习这些资料时，要多思考，多提问，多质疑。相信通过和小伙伴们的交流，能让你的学习事半功倍。<br>
+				&nbsp;&nbsp;百度前端技术学院的课程任务是由百度前端工程师专为对前端不同掌握程度的同学设计。我们尽力保证课程内容的质量以及学习难度的合理性，但即使如此，真正决定课程效果的，还是你的每一次思考和实践。<br>
+				&nbsp;&nbsp;课程多数题目的解决方案都不是唯一的，这和我们在实际工作中的情况也是一致的。</p>
+			</div>
+		</div>
+		<div class="cb-right">
+			<div class="bgimg_2">
+				<div class="bgimg2_1">
+				<span>前端技术</span>
+				<p>百度前端技术学院</p>
+				</div>
+			</div>
+			<div class="bgimg_3">
+				<ul>
+					<li><span>前端前端前端前端前端前.......................</span><p>百度</p></li>
+					<li><span>前端前端前端...............................</span><p>IFE前端</p></li>
+					<li><span>前端前端前端前端前端前端前端.................</span><p>学院</p></li>
+				</ul>
+				<div class="bgimg_4">
+					<span>0</span>
+					<p>ONE TWO</p>
+					<P>THERE FOR FIVE</P>
+					<P>hello world hello world </p>
+					<p>hello world</P>
+				</div>
+				<div class="b-right">
+					<span>“</span>
+					<p>hello world hello world hello world hello world hello world hello world hello world hello world hello world hello world hello world</p>
+					<p>”</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="footer">
+	<p>ife.baidu.com</p>
+	</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,79 @@
+
+/*task1_8 CSS 样式*/
+.main{
+	padding:10px;
+	overflow: auto;
+}
+[class*='col-'] {
+        float: left; 
+        min-height: 1px; 
+        /*-- our gutter -- */
+        padding: 12px; 
+        height:50px;
+		background-color:#eee;
+		margin:10px;
+		border:1px solid #999;
+}
+.col-1{
+	/*Firefox*/
+	width:-moz-calc(8.33% - 20px);
+	/*chrome safari*/
+	width:-webkit-calc(8.33% - 20px);
+	/*Standard */
+	width:calc(8.33% - 20px);
+}
+.col-2{
+	width:-moz-calc(16.66% - 20px);
+	width:-webkit-calc(16.66% - 20px);
+	width:calc(16.66% - 20px);
+}
+.col-3{
+	width:-moz-calc(25% - 20px);
+	width:-webkit-calc(25% - 20px);
+	width:calc(25% - 20px);
+}
+.col-4{
+	width:-moz-calc(33.33% - 20px);
+	width:-webkit-calc(33.33% - 20px);
+	width:calc(33.33% - 20px);
+}
+.col-6{
+	width:-moz-calc(50% - 20px);
+	width:-webkit-calc(50% - 20px);
+	width:calc(50% - 20px);
+}
+@media all and (max-width: 360px){
+	.col-1, .col-2, .col-3, .col-4, .col-6{
+		width:-moz-calc(100% - 20px);
+		width:-webkit-calc(100% - 20px);
+		width:calc(100% - 20px);
+	}
+}
+@media all and (min-width: 361px) and (max-width:768px){
+	.col-4{
+		width:-moz-calc(50% - 20px);
+		width:-webkit-calc(50% - 20px);
+		width:calc(50% - 20px);
+	}
+	.col-4:last-of-type{
+		width:-moz-calc(100% - 20px);
+		width:-webkit-calc(100% - 20px);
+		width:calc(100% - 20px);
+	}
+	.col-1{
+		width:-moz-calc(16.66% - 20px);
+		width:-webkit-calc(16.66% - 20px);
+		width:calc(16.66% - 20px);
+	}
+	.row3 >.col-6, .row3 .col-1 ~ .col-1 ~ .col-2 ~ .col-2{
+		width:-moz-calc(25% - 20px);
+		width:-webkit-calc(25% - 20px);
+		width:calc(25% - 20px);
+	}
+	.row3 .col-1 ~ .col-1 ~ .col-2{
+		width:-moz-calc(66.66% - 20px);
+		width:-webkit-calc(66.66% - 20px);
+		width:calc(66.66% - 20px);
+	}
+	
+}
