@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<title>absolute的破坏性</title>
+<style>
+.box {
+    padding: 10px;
+    background-color: #f0f0f0;	
+}
+input {
+    position: absolute; top: 234px;	
+	width: 160px; height: 32px;
+	font-size: 100%;
+}
+</style>
+</head>
+
+<body>
+<div class="box">
+	<!-- 
+		absolute的破坏性是对图片的absolute化。
+		图片设置absolute后，图片就从标准文档流中脱离出来，
+		没有东西可以继续支撑容器的高度，
+		容器自然就坍塌了。
+		好像把房子的柱子挪到房子外边，
+		房子果断就塌了 -->
+	<img id="image" src="http://img.mukewang.com/54447b06000171a002560191.jpg" width="256" height="191">
+</div>
+<input id="button" type="button" value="图片absolute化">
+<script>
+var eleImg = document.getElementById("image"), eleBtn = document.getElementById("button");
+if (eleImg != null && eleBtn != null) {
+	eleBtn.onclick = function() {
+		if (this.absolute) {
+			eleImg.style.position = "";
+			this.value = "图片absolute化";
+			this.absolute = false;
+		} else {
+			eleImg.style.position = "absolute";
+			this.value = "图片去absolute";
+			this.absolute = true;
+		}
+	};
+}
+</script>
+</body>
+</html>

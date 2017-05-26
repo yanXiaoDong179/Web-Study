@@ -1,0 +1,22 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>没有宽度和高度声明实现的全屏自适应效果</title>
+<style>
+html, body { height: 100%; padding:0;margin:0;}
+.overlay {
+    position: absolute;
+    /*通过对绝对定位元素的top,bottom,left,right值得对立设置，使其元素产生拉伸*/
+    /*父元素需要高度的支持*/
+	left: 0; top: 0; right: 0; bottom: 0;
+	background-color: #000;
+	opacity: .5; filter: alpha(opacity=50);
+}
+</style>
+</head>
+
+<body>
+<div class="overlay"></div>
+</body>
+</html>
