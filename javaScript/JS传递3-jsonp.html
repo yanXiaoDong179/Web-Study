@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+	<meta charset="utf-8">
+	<title>JS传递3-jsonp</title>
+	<style type="text/css">
+		
+	</style>
+</head>
+<body>
+<h1>Mighty Gumball Sales</h1>
+	<div id="sales">
+		
+	</div>
+<script type="text/javascript">
+	window.onload=function(){
+			//建立定时器
+			//setInterval方法有两个参数，一个处理函数和一个时间间隔
+		setInterval(handleRefresh,3000);
+	}
+	var lastReportTime=0;
+	function handleRefresh(){
+			//建立jsonp url，并把它赋给变量url
+			//在URL尾部增加一个新的“怪怪的”参数，
+			//创建一个新的Date对象，使用Date对象的getTime方法来得到时间
+			//然后把这个时间增加到URL尾部
+		var url = "http://gumball.wickedlysmart.com?callback=updateSales"+
+					"&lastreporttime="+lastReportTime+
+					"&random"+(new Date()).getTime();
+			//创建一个新的document对象
+		var newScriptElement=document.createElement("script");
+		newScriptElement.setAttribute("src",url);
+		newScriptElement.setAttribute("id","jsonp");
+
+		var oldScriptElement=document.getElementById("jsonp");
+		var head=document.getElementsByTagName("head")[0];
+		if(oldScriptElement==null){	
+				//把newScriptElement对象插入到head内
+			head.appendChild(newScriptElement);
+		}else{
+				//将旧的对象替换为新的对象
+			head.replaceChild(newScriptElement,oldScriptElement);
+		}
+	}
+
+	function updateSales(sales){
+			//获取ID为sales的节点
+		var salesDiv = document.getElementById("sales");
+			//循环遍历传入进来的数组
+		for(var i=0;i<sales.length;i++){
+			var sale = sales[i];
+				//创建一个document对象
+			var div = document.createElement("p");
+
+			div.innerHTML=sale.name+" sold "+sale.sales+" gumballs ";
+				//将新建的对象插入到DIV中
+			salesDiv.appendChild(div);
+		}
+		if(sales.length>0){
+			lastReportTime=sales[sales.length-1].time;
+		}
+	}
+</script>
+</body>
+</html>

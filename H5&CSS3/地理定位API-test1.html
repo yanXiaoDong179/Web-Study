@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+	<meta charset="utf-8">
+	<title>地理定位API-test1</title>
+	<link rel="stylesheet" type="text/css" href="css/reset.css">
+	<script type="text/javascript" src="js/jquery3.2.1.js"></script>
+	<style type="text/css">
+		
+	</style>
+</head>
+<body>
+<div id="location">
+	Your location will go here.
+</div>
+<script type="text/javascript">
+
+	window.onload=getMyLocation;
+	function getMyLocation(){
+			//检查浏览器是否支持地理定位
+		if(navigator.geolocation){
+				//如果支持地理定位，则调用getCurrentPosition方法。
+				//并传入一个处理函数，
+				//如果浏览器能成功获取位置就调用第一个函数，如果不能成功就调用第二个函数
+			navigator.geolocation.getCurrentPosition(displayLocation,displayError);
+		}else{
+			alert("您的浏览器不支持地理定位！");
+		}
+	}
+		//位置处理函数
+	function displayLocation(position){
+			//从position对象获取位置的经度纬度
+		var latitude = position.coords.latitude;
+		var longitude = position.coords.longitude;
+
+		var div=document.getElementById("location");
+		div.innerHTML = "You are at Latitude:"+latitude+",longtiude: "+longitude;
+	}
+
+		//错误处理函数
+		//这是一个错误处理函数，地位位置API会向它传入一个错误
+	function displayError(error){
+			//error对象有一个code属性，其中包含0~3的数，这是用JS为各个错误关联一个错误消息的好办法
+			//我们创建了一个对象，包括4个属性，分别为0 ~ 3 ，这些属性是串，包含了我们希望与各个错误关联的错误消息
+		var errorTypes={
+			0:"Unknow error",
+			1:"Permission denied by user",
+			2:"Position is not available",
+			3:"Request tiomed out"
+		};
+			//使用error.code属性，将一个错误消息串赋值给一个新的变量
+		var errorMessage = errorTypes[error.code];
+			//对于错误0和2，又是error.message属性中会有一些额外的信息，所以把这些信息增加到errorMessage串
+		if(error.code==0||error.code==2){
+			errorMessage=errorMessage+" "+error.message;
+		}
+		var div=document.getElementById("location");
+		div.innerHTML=errorMessage;
+	}
+</script>
+</body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+	<meta charset="utf-8">
+	<title>css渐变</title>
+	<link rel="stylesheet" type="text/css" href="css/reset.css">
+	<script type="text/javascript" src="js/jquery3.2.1.js"></script>
+	<style type="text/css">
+		.linear1{
+			margin:10px auto;
+			width:1000px;
+			height:100px;
+			border:1px solid #fff;
+			text-align: center;
+			color:#FFF;
+			background: linear-gradient(red, green);
+		}
+		.linear2{
+			margin:10px auto;
+			width:1000px;
+			height:100px;
+			border:1px solid #fff;
+			text-align: center;
+			color:#FFF;
+			background: linear-gradient(to right,red, green, blue);
+		}
+		.linear3{
+			margin:10px auto;
+			width:1000px;
+			height:100px;
+			border:1px solid #fff;
+			text-align: center;
+			color:#FFF;
+			background: linear-gradient(to right,rgba(255,0,0,0), rgba(255,0,0,1));
+		}
+		.linear4{
+			margin:10px auto;
+			width:1000px;
+			height:100px;
+			border:1px solid #fff;
+			text-align: center;
+			color:#FFF;
+			/*颜色后面接百分号表示其实位置*/
+			background: linear-gradient(to right,red, yellow 10%, green 20%,blue);
+		}
+		.linear5{
+			margin:10px auto;
+			width:1000px;
+			height:100px;
+			border:1px solid #fff;
+			text-align: center;
+			color:#FFF;
+			/*颜色后面接百分号表示其实位置*/
+			background: linear-gradient(to right,red,red 50%,black 50%,black 70%,#ff3 70%,#ff3);
+		}
+		.linear6{
+			margin:10px auto;
+			width:1000px;
+			height:100px;
+			border:1px solid #fff;
+			text-align: center;
+			color:#FFF;
+			/*颜色后面接百分号表示其实位置*/
+			background: linear-gradient(130deg, red, blue);
+		}
+		.Radial{
+			margin:10px auto;
+			width:1000px;
+			height:300px;
+			border:1px solid #fff;
+			text-align: center;
+			color:#FFF;
+			/*颜色后面接百分号表示其实位置*/
+			/*设置形状
+
+			shape 参数定义了形状。它可以是值 circle 或 ellipse。其中，circle 表示圆形，ellipse 表示椭圆形。默认值是 ellipse。*/
+			background: radial-gradient(circle, transparent,transparent 10%, yellow 10%, green); 
+
+		}
+	</style>
+</head>
+<body>
+	<div class="linear1">CSS垂直渐变</div>
+	<div class="linear2">CSS水平渐变</div>
+	<div class="linear3">CSS透明渐变</div>
+	<div class="linear6">CSS角度漸變</div>
+	<div class="linear4">CSS重复渐变1</div>
+	<div class="linear5">CSS重复渐变2</div>
+	<div class="Radial">CSS徑向渐变</div>
+<script type="text/javascript"></script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+	<meta charset="utf-8">
+	<title>JSON-TEST-1</title>
+	<link rel="stylesheet" type="text/css" href="css/reset.css">
+	<script type="text/javascript" src="js/jquery3.2.1.js"></script>
+	<style type="text/css">
+		
+	</style>
+</head>
+<body>
+	<h1>Mighty Gumball Sales</h1>
+	<div id="sales">
+		
+	</div>
+<script type="text/javascript">
+	window.onload=function(){
+		var url="http://localhost/sales.json";
+
+			//创建一个对象，基于URL调用opoen方法，然后将onload属性设置为一个和函数，建立XMLHttpRequest
+		var request = new XMLHttpRequest();
+		request.open("GET",url);
+		request.onload=function(){
+				//检查是否一切正常，然后...
+			if(request.status==200){
+					//数据完成加载时，会调用这个函数
+				updateSales(request.responseText);
+			}
+		};
+
+			//最后，发出请求
+		request.send(null);
+	}
+	function updateSales(responseText){
+		var salesDiv=document.getElementById("sales");
+		salesDiv.innerHTML=responseText;
+	}
+</script>
+</body>
+</html>

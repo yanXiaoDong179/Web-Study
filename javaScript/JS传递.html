@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+	<meta charset="utf-8">
+	<title>JS传递</title>
+	<link rel="stylesheet" type="text/css" href="css/reset.css">
+	<style type="text/css">
+		
+	</style>
+</head>
+<body>
+<script type="text/javascript">
+	function animalSays(type,sound){
+		alert(type+" says "+sound);
+	}
+</script>
+<script type="text/javascript" src="http://wickedlysmart.com/hfhtml5/chapter6/dog.js">
+	//加载这个JS文件，这个代码会调用alert()函数
+	//JS文件内部
+
+	//alert("woof");
+</script>
+<script type="text/javascript" src="http://wickedlysmart.com/hfhtml5/chapter6/dog2.js">
+	//JS文件内部
+	//
+	//animalSays("dog","woof");
+</script>
+</body>
+</html>

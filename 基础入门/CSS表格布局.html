@@ -12,7 +12,13 @@
 		}
 			/*单元格边框*/
 		th,td{
-			border:1px solid #000;
+			border:1px solid #fff;
+		}
+
+			/*如果是单线边框，TR设置边框有效
+			如果是双线边框，TR边框无效*/
+		tr{
+			border:5px solid yellow;
 		}
 		/*以上设置好后，表格呈现双线表格*/
 			/*接下来改为单线*/
@@ -21,12 +27,12 @@
 		}
 		/*设置相邻单元格边框的距离，此方法只适用于边框隔开的情况下*/
 		table{
-			border-collapse: separate;
-			border-spacing: 5px;
+			border-collapse: separate;	/*边框分离*/
+			border-spacing: 5px;		/*边框之间的距离*/
 		}
 		/*背景颜色*/
 		table{
-			border-collapse:collapse;
+			border-collapse: collapse;
 			background-color: red;	/*背景颜色*/
 			color:yellow;			/*文字颜色*/
 		}
@@ -35,7 +41,7 @@
 		}
 		/*边框颜色*/
 		table,th,td{
-			border-color: #ccc;
+			border-color: #fff;
 		}
 		/*表格填充*/
 		td{

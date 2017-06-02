@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+	<meta charset="utf-8">
+	<title>JS传递2</title>
+	<style type="text/css">
+		
+	</style>
+</head>
+<body>
+<h1>Mighty Gumball Sales</h1>
+	<div id="sales">
+		
+	</div>
+<script type="text/javascript">
+	function updateSales(sales){
+			//获取ID为sales的节点
+		var salesDiv = document.getElementById("sales");
+			//循环遍历传入进来的数组
+		for(var i=0;i<sales.length;i++){
+			var sale = sales[i];
+				//创建一个document对象
+			var div = document.createElement("div");
+
+			div.innerHTML=sale.name+" sold "+sale.sales+" gumballs ";
+				//将新建的对象插入到DIV中
+			salesDiv.appendChild(div);
+		}
+	}
+</script>
+	<!-- 这是指向另外一个WEB服务器的链接。我们使用callback参数，并指定了我们的函数updatesALES，所以这个WEB服务会把josn包装在updateSales函数调用中 -->
+<script type="text/javascript" src="http://gumball.wickedlysmart.com/?callback=updateSales">
+	
+</script>
+</body>
+</html>
