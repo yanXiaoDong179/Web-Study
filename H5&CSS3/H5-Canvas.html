@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+	<meta charset="utf-8">
+	<title>Test</title>
+	<style type="text/css" href="sbtb/css/reset.css"></style>
+	<script type="text/javascript" src="sbtb/js/jquery-3.2.1.min.js"></script>
+	<style type="text/css">
+
+	</style>
+</head>
+<body>
+
+<script type="text/javascript">
+var canvasWidth=500,canvasHeight=500;
+var myCanvas,context;
+ window.onload=function(){
+ 	Canvas();
+ 	drawRect();
+ }
+ function Canvas(){
+ 		//画一个画布
+ 	document.body.innerHTML="<canvas id=\"mycanvas\" width=\""+canvasWidth+"\" height=\""+canvasHeight+"\"></canvas>"
+ 	myCanvas = document.getElementById("mycanvas");
+ 	context = myCanvas.getContext("2d");		//绘制图形的一个对象
+ }
+ function drawRect(){
+ 	context.fillStyle="#ff0000";		//修改默认颜色
+ 	//context.rotate(45); 					//旋转
+ 	//context.translate(200,200);  	//移动
+ 	//context.scale(2,0.5);  				//缩放
+ 	context.fillRect(0,0,200,200);	//绘制
+ }
+</script>
+</body>
+</html>

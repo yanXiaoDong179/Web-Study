@@ -1,0 +1,57 @@
+/*登陆界面css*/
+header{
+	height:100px;
+}
+footer{
+	height:100px;
+}
+.main{
+	height:500px;
+}
+.login{
+	background-color:rgba(93,102,108,0.5);
+	position:absolute;
+	border-radius: 6px;
+	top:150px;
+	right:100px;
+}
+.login p:first-child{
+	font-size:18px;
+	font-weight: bold;
+	line-height:50px;
+	color:#fff;
+}
+.login form{
+	height:250px;
+	text-align: center;
+}
+.login input[type="text"],.login input[type="password"]{
+	display:block;
+	width:250px;
+	height:35px;
+	padding-left:10px;
+	margin:10px 25px;
+}
+.login input[type="text"]:hover,
+.login input[type="password"]:hover,
+.login input[type="text"]:focus,
+.login input[type="password"]:focus{
+	border:1px solid #66C8F4;
+	box-shadow: 0 0 5px 1px #66C8F4;
+}
+.login input[type="submit"]{
+	display:block;
+	border:0;
+	width:250px;
+	height:30px;
+	margin:10px 25px;
+	border-radius: 5px;
+	font-weight:bold;
+	font-size:16px;
+	color:#fff;
+	background-color:#70C4EB;
+	cursor:pointer;
+}
+.login input[type="submit"]:hover{
+	background-color:#66C8F4;
+}

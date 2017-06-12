@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+	<meta charset="utf-8">
+	<!-- <meta http-equiv="refresh" content="5"> -->
+	<title>index-home</title>
+	<link rel="stylesheet" type="text/css" href="css/reset.css">
+	<style type="text/css">
+		#main-home{
+			width:980px;
+			height:598px;
+			overflow: auto;
+			position: relative;
+		}
+		#main-home>div{
+			width:470px;
+			height:276px;
+			margin:10px;
+			float: left;
+			border-bottom-right-radius: 5px;
+			box-shadow: 1px 1px 8px #666;
+			background-color: #fff;
+		}
+		.hover{
+			cursor: pointer;
+			box-shadow: 2px 2px 12px #666 !important;
+		}
+		.mini{
+			height:240px;
+			overflow: hidden;
+		}
+		.mini>span{
+			display: block;
+			width:80%;
+			margin:auto;
+			text-align: center;
+			font-size: 16px;
+			color:green;
+			height:30px;
+			line-height: 30px;
+			border-bottom: 1px solid #999;
+		}
+		.condition-1,.condition-2,.condition-3{
+			width:80%;
+			margin:0 auto;
+			margin-top: 20px;
+		}
+		#main-home ul li{
+			margin-top: 5px;
+			margin-bottom: 5px;
+			height:40px;
+		}
+		#main-home em{
+			color:green;
+		}
+		.max{
+			display: none;
+		}
+		#back{
+			position: absolute;
+			bottom: 15px;
+			right:15px;
+			width:50px;
+			height:30px;
+		}
+		#back:hover{
+			box-shadow: 1px 1px 5px green;
+		}
+		.goods{
+			width: 90%;
+			margin: auto;
+		}
+		.goods>div{
+			height: 50px;
+			border-bottom:1px solid green;
+			margin-bottom: 10px;
+		}
+		.goods>ul li{
+			width:100px;
+			height:50px;
+			margin:5px;
+			float: left;
+			box-shadow: 1px 1px 8px #999;
+		}
+		.suspend{
+			color:red;
+			text-align:center;
+		}
+	</style>
+</head>
+<body>
+<div id="main-home">
+	<div class="storage-1">
+		<div class="mini">
+			<span>仓库一</span>
+			<div class="condition-1">
+				<ul>
+					<li><strong>温度：</strong>
+					<em class="cond-1">26</em><em>&#8451</em></li>
+					<li><strong>湿度：</strong>
+					<em class="cond-1">26</em><em>%</em></li>
+					<li><strong>亮度：</strong>
+					<em class="cond-1">26</em><em>nit</em></li>
+					<li><strong>烟雾：</strong>
+					<em class="cond-1">26</em><em>ppm</em></li>
+				</ul>
+			</div>
+		</div>
+		<div class="max">
+			<div class="goods">
+				<div>
+					<p>仓库商品预览</p>
+				</div>
+				<ul>
+					<li>商品栏1</li>
+					<li>商品栏2</li>
+					<li>商品栏3</li>
+					<li>商品栏4</li>
+					<li>商品栏5</li>
+					<li>商品栏6</li>
+					<li>商品栏7</li>
+				</ul>
+			</div>
+			<div id="back">BACK</div>
+		</div>
+	</div>
+	<div class="storage-2">
+		<div class="mini">
+			<span>仓库二</span>
+			<div class="condition-2">
+				<ul>
+					<li><strong>温度：</strong>
+					<em>26</em><em>&#8451</em></li>
+					<li><strong>湿度：</strong>
+					<em>26</em><em>%</em></li>
+					<li><strong>亮度：</strong>
+					<em>26</em><em>nit</em></li>
+					<li><strong>烟雾：</strong>
+					<em>26</em><em>ppm</em></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="storage-3">
+		<div class="mini">
+			<span>仓库三</span>
+			<div class="condition-3">
+				<ul>
+					<li><strong>温度：</strong>
+					<em>26</em><em>&#8451</em></li>
+					<li><strong>湿度：</strong>
+					<em>26</em><em>%</em></li>
+					<li><strong>亮度：</strong>
+					<em>26</em><em>nit</em></li>
+					<li><strong>烟雾：</strong>
+					<em>26</em><em>ppm</em></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="storage-4">
+		添加
+	</div>
+</div>
+<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript">
+function loading(){
+	//读取localStorage数据
+	var json=localStorage.getItem("condition");
+	//将json反序列化
+	var jsonObj=JSON.parse(json);
+	var $cond_1 = $(".condition-1").find(".cond-1");
+	$cond_1.eq(0).text(jsonObj.wd[jsonObj.wd.length-1]);
+	$cond_1.eq(1).text(jsonObj.sd[jsonObj.sd.length-1]);
+	$cond_1.eq(2).text(jsonObj.ld[jsonObj.ld.length-1]);
+	$cond_1.eq(3).text(jsonObj.yw[jsonObj.yw.length-1]);
+	if(parseInt($cond_1.eq(0).text())>38||parseInt($cond_1.eq(0).text())<0){
+		$cond_1.eq(0).css('color','red');
+		$cond_1.eq(0).next().css('color','red');
+	}else{
+		$cond_1.eq(0).css('color','green');
+		$cond_1.eq(0).next().css('color','green');
+	}
+	//console.log("inedx_home");
+	repeat_home=setTimeout(loading,500);
+}
+// setTimeout(function(){
+// 	clearTimeout(repeat_home);
+// },5000);
+$(".storage-1").on('click',function(){
+	if($(this).innerWidth()>500){
+		return false;
+	}
+	$(this).nextAll().fadeOut();
+	$(this).stop().animate({width:"953px",height:"571px"},300,function(){
+		$(".mini").eq(0).stop()
+		.animate({height:"1px"},300,function(){
+			$(".max").eq(0).fadeIn(300);
+		});
+	});
+	$(this).removeClass("hover");
+});
+$("#back").click(function(){
+	$(".max").fadeOut(200);
+	$(".storage-1").animate({width:"470px",height:"276px"},300,function(){
+		$(".mini").eq(0).css("height","250px");
+		$(".storage-1").nextAll().fadeIn(300);
+	});
+})
+$(".storage-1").on({
+	mouseover:function(){
+		if($(this).innerWidth()>500){
+			return false;
+		}else{$(this).addClass("hover");}},
+	mouseout:function(){$(this).removeClass("hover");}
+});
+$(".storage-2").on({
+	click:function(){
+		if($(this).find(".suspend").length>0){
+			return false;
+		}else{
+			$(this).append("<div class='suspend'>暂未开发</div>")
+		}
+	},
+	mouseenter:function(){$(this).addClass("hover")},
+	mouseleave:function(){
+		$(this).removeClass("hover");
+		$(this).find(".suspend").remove();
+	}
+});
+$(".storage-3").on({
+	click:function(){
+		if($(this).find(".suspend").length>0){
+			return false;
+		}else{
+			$(this).append("<div class='suspend'>暂未开发</div>")
+		}
+	},
+	mouseenter:function(){$(this).addClass("hover")},
+	mouseleave:function(){
+		$(this).removeClass("hover");
+		$(this).find(".suspend").remove();
+	}
+});
+$(".storage-4").on({
+	click:function(){
+		if($(this).find(".suspend").length>0){
+			return false;
+		}else{
+			$(this).append("<div class='suspend'>暂未开发</div>")
+		}
+	},
+	mouseenter:function(){$(this).addClass("hover")},
+	mouseleave:function(){
+		$(this).removeClass("hover");
+		$(this).find(".suspend").remove();
+	}
+});
+$().ready(loading());
+//document.addEventListener('DOMContentLoaded',loading());
+</script>
+</body>
+</html>

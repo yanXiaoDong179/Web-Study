@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+	<meta charset="utf-8">
+	<title>dengguang</title>
+	<link rel="stylesheet" type="text/css" href="css/reset.css">
+	<style type="text/css">
+		#main-light{
+			width:980px;
+			height:598px;
+			overflow: auto;
+			position: relative;
+			border-bottom-right-radius: 5px;
+			/*background:url(img/room_off.jpg);
+			background-size:980px 598px;*/
+			/*background-size: contain;
+			background-repeat:no-repeat;*/
+		}
+		#switch-light{
+			position: absolute;
+			bottom: 10px;
+			right: 20px;
+		}
+		/*开关的轮廓*/
+		.switch-light{
+			display: block;
+			position: relative;
+			width:100px;
+			height:120px;
+			border-radius: 5px;
+			background-color: #f1f1f1;
+		}
+		.switch-light2{
+			display: block;
+			position: relative;
+			width:100px;
+			height:120px;
+			border-radius: 5px;
+			background-color: #f1f1f1;
+		}
+		.indicate{
+			display: block;
+			position: absolute;
+			margin:35px 0 0 40px;
+			width: 20px;
+			height: 4px;
+			border-radius: 2px;
+			background-color: #A8C1C2;
+			z-index: 1;
+			transition: all 200ms;
+		}
+		.indicate_yes{
+			margin:39px 0 0 40px;
+			background-color: #A3D7E7;
+		}
+		/*开关内部的小按钮*/
+		.switch-light:after{
+			display: block;
+			position: absolute;
+			top:20px;
+			bottom: 20px;
+			left:10px;
+			right:10px;
+			border:1px solid #FFF;
+			transition: all 200ms;
+		}
+		.switch-light2:after{
+			display: block;
+			position: absolute;
+			top:29px;
+			bottom: 11px;
+			left:10px;
+			right:10px;
+			border:1px solid #FFF;
+			transition: all 200ms;
+		}
+		/*默认状态的小按钮*/
+		.light-on:after {
+		  content: '';
+		  border-radius: 5px;
+		  /*border:1px solid #FFF;*/
+		  background: linear-gradient(#fff, #f2f2f2 80%,#fff);
+		  box-shadow: 0 1px 0 0 #fff,
+		  	0 3px 0.5px 0 #E7E9EA,
+		  	0 5px 0.5px 0 #DEDFDF,
+		  	0 6px 0.5px 0 #CCCCCD,
+		  	0 7px 0.5px 0 #C5C7C7,
+		  	0 8px 2px 0 #818283,
+		  	0 9px 2px 0 #A7A8A8;
+		}
+
+		/*关闭后的小按钮*/
+		.light-off:after {
+		  content: '';
+		  border-radius: 5px;
+		  /*border:1px solid #FFF;*/
+		  background: linear-gradient(#fff, #f2f2f2 80%,#fff);
+		  box-shadow: 0 -1px 0 0 #fff,
+		  	0 -3px 0.5px 0 #E7E9EA,
+		  	0 -5px 0.5px 0 #DEDFDF,
+		  	0 -6px 0.5px 0 #CCCCCD,
+		  	0 -7px 0.5px 0 #C5C7C7,
+		  	0 -8px 2px 0 #818283,
+		  	0 -9px 2px 0 #A7A8A8;
+		}
+	</style>
+</head>
+<body>
+<div id="main-light">
+	<img class="img_light" src="img/room_off.jpg" style="width:977px ;height:595px" />
+	<div id="switch-light">
+		<a href="#" class="switch-light light-on"><i class="indicate"></i></a>
+	</div>
+</div>
+<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript">
+var light_num=0;
+$('.switch-light').click(function(e) {
+	if(light_num==0){
+		e.preventDefault();
+		$(this).removeClass('light-on')
+		       .addClass('light-off')
+		       .addClass("switch-light2");
+		$(this).children(".indicate").addClass("indicate_yes");
+		$(".img_light").attr("src","img/room_on.jpg");
+		light_num=1;
+	}else{
+		e.preventDefault();
+		$(this).addClass('light-on')
+		       .removeClass('light-off')
+		       .removeClass("switch-light2");
+		$(this).children(".indicate").removeClass("indicate_yes");
+		$(".img_light").attr("src","img/room_off.jpg");
+		light_num=0;
+	}
+});
+</script>
+</body>
+</html>
