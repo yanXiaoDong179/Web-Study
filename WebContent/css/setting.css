@@ -1,0 +1,129 @@
+/* 设置页面CSS */
+#main-set{
+	width:960px;
+	height:578px;
+	margin:10px;
+	overflow: auto;
+	border-bottom-right-radius: 5px;
+	box-shadow: 1px 1px 8px #666;
+	background-color: #dfe8e5;
+}
+.main-set{
+	width:600px;
+	height:500px;
+	margin:auto;
+	margin-top:20px;
+	overflow: hidden;
+	position: relative;
+}
+.title-user,.title-system{
+	width:100%;
+	height:40px;
+	line-height: 40px;
+	padding-left:20px;
+	margin-top:5px;
+	border-radius: 10px;
+	font-size: 26px;
+	font-family: SimSun;
+	color:#999;
+	border:1px solid #999;
+	cursor: pointer;
+}
+.setting-user,.setting-system{
+	display: block;
+	overflow: auto;
+	width:100%;
+	height:350px;
+	border:1px solid #999;
+	border-top:none;
+	border-radius: 10px;
+}
+.setting-system{
+	display: none;
+}
+.setting-user form{
+	width:250px;
+	margin:auto;
+	margin-top: 30px;
+}
+.setting-user form>input{
+	width:100%;
+	height:40px;
+	padding:5px;
+	font-size: 16px;
+	margin:10px 0;
+	border-radius: 5px;
+	text-align: center;
+}
+.setting-user form>input:last-child{
+	color:#fff;
+	cursor:pointer;
+	background-color: #FA8D62;
+}
+.setting-user form>input:last-child:hover{
+	background-color: #F47D2E;
+}
+.setting-user section{
+	margin-bottom: 10px;
+}
+.setting-system>span{
+	display: block;
+	overflow: auto;
+	width:100%;
+	height:50px;
+	line-height: 50px;
+	padding-left: 50px;
+}
+.setting-system>span:first-child{
+	margin-top: 20px;
+}
+.setting-system>span>strong{
+	float:left;
+	font-weight: normal;
+	font-size:16px;
+	color:#666;
+}
+/*开关按钮*/
+.set-button{
+	display:block;
+	position: relative;
+	margin-left:150px;
+	margin-top:5px;
+	width:100px;
+	height:40px;
+	border-radius: 50px;
+	border:1px solid #fff;
+	background-color: #E9E4E0;
+	cursor: pointer;
+}
+.set-button:after{
+	display: block;
+	position: absolute;
+	top:2px;
+	bottom: 2px;
+	left:2px;
+	width:30px;
+	line-height: 30px;
+	text-align: center;
+	text-transform: uppercase;
+	font-size: 14px;
+	background-color: #fff;
+	border:2px solid;
+	transition: all 500ms;
+}
+.off:after {
+  content: 'OFF';
+  border-radius:30px;
+  color: #999;
+}
+.on:after {
+  content: 'ON';
+  border-radius:30px;
+  transform: translate(60px, 0);
+  color:transparent;
+  background-color:#4BD429;
+}
+#meg{
+  display:block;
+  height:16px;
+}

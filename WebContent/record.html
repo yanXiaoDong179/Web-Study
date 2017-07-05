@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" type="text/css" href="css/reset.css">
+<style type="text/css">
+#main-record{
+	width:960px;
+	height:578px;
+	margin:10px;
+	overflow: hidden;
+	border-bottom-right-radius: 5px;
+	box-shadow: 1px 1px 8px #666;
+	padding:5px;
+}
+#main-record ul{
+	overflow: hidden;
+}
+#main-record ul li{
+	display: block;
+	float: left;
+	width:50%;
+	padding:8px;
+	background-color: #999;
+	color:#fff;
+	font-size: 16px;
+	font-weight:400;
+	text-align: center;
+}
+.recordContent{
+	width:100%;
+	height:533px;
+	overflow: hidden;
+}
+.recordContent>div{
+	width:2000px;
+	height:100%;
+	transition-duration: 0.5s;
+}
+#recordInContent{
+	float:left;
+	width:950px;
+	height:100%;
+	margin-right:20px;
+	background-color:#E5E5E5;
+}
+#recordOutContent{
+	float:left;
+	width:950px;
+	height:100%;
+	background-color:#Eee;
+}
+.Active{
+	background-color:#4F5253 !important;
+}
+.recordFind{
+	display: block;
+	width: 100%;
+	height: 30px;
+	padding:0 10px;
+}
+.recordFind label{
+	line-height: 30px;
+	font-size:16px;
+}
+.recordFind input{
+	height:24px;
+	margin:3px 0;
+	padding-left:4px;
+	vertical-align:top;
+}
+.recordFind button{
+	height:24px;
+	margin:3px 0;
+	margin-right:18px;
+}
+.recordFind button:last-of-type{
+	margin-right:0px;
+}
+.recordMain{
+	width:100%;
+	padding:5px;
+}
+.recordMain thead{
+	line-height:30px;
+	background-color: #73A7C6;
+	color:#fff;
+}
+</style>
+</head>
+<body>
+<div id="main-record">
+	<nav>
+		<ul>
+			<li class="recordIn Active" >入库记录</li>
+			<li class="recordOut">出库记录</li>
+		</ul>
+	</nav>
+	<section class="recordContent">
+		<div class="test">
+			<div id="recordInContent">
+				<form class="recordFind">
+					<label for="recordGood">按商品查询</label>
+					<input type="text" id="recordGood" name="" placeholder="查询的ID"><button>查找</button>
+					<label for="recordDay">日期查询</label>
+					<input type="text" id="recordDay" name="" placeholder=""><button>查找</button>
+					<label for="recordMonth">月份查询</label>
+					<input type="text" id="recordMonth" name=""><button>查找</button>
+				</form>
+				<table class="recordMain">
+					<thead>
+						<tr>
+							<th>入库流水号</th>
+							<th>商品ID</th>
+							<th>商品名称</th>
+							<th>入库时间</th>
+							<th>入库数量</th>
+							<th>商品状态</th>
+						</tr>
+					</thead>
+					<tbody>
+						
+					</tbody>
+				</table>
+			</div>
+			<div id="recordOutContent">
+				出库
+			</div>
+		</div>
+	</section>
+</div>
+<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript">
+$("nav li").on('click',function(){
+	$(this).addClass("Active").siblings().removeClass('Active');
+	var this_index=$(this).index();
+	var this_move= -970*this_index+"px";
+	$(".test").css({
+		"transform":"translateX("+this_move+")",
+	})
+});
+</script>
+</body>
+</html>

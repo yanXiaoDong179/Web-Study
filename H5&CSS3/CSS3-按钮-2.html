@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+	<meta charset="utf-8">
+	<title>Test</title>
+	<style type="text/css" href="css/reset.css"></style>
+	<style type="text/css">
+		body{
+			background-color: #E6C9B6;
+		}
+		/*开关按钮*/
+		.button{
+			display: block;
+			margin:100px auto;
+			position: relative;
+			width:100px;
+			height:40px;
+			border-radius: 50px;
+			border:1px solid #fff;
+			background-color: #E9E4E0;
+		}
+		.button:after{
+			display: block;
+			position: absolute;
+			top:2px;
+			bottom: 2px;
+			left:2px;
+			width:36px;
+			line-height: 36px;
+			text-align: center;
+			text-transform: uppercase;
+			font-size: 16px;
+			background-color: #fff;
+			border:2px solid;
+			transition: all 500ms;
+		}
+		.off:after {
+		  content: 'OFF';
+		  border-radius:30px;
+		  color: #999;
+		}
+		.on:after {
+		  content: 'ON';
+		  border-radius:30px;
+		  transform: translate(56px, 0);
+		  color:transparent;
+		  background-color:#4BD429;
+		}
+	</style> 
+</head>
+<body>
+<a href="#" class="button off"></a>
+<script type="text/javascript" src="js/jquery3.2.1.js"></script>
+<script type="text/javascript">
+
+var zn=0;
+$('.button').click(function(e){
+	if(zn==1){
+		$(this).removeClass("on").addClass("off");
+		zn=0;
+	}else{
+		$(this).removeClass("off").addClass("on");
+		zn=1;
+	}
+});
+
+//localStorage.clear();
+</script>
+</body>
+</html>

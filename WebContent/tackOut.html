@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+	<meta charset="utf-8">
+	<title>tackOut</title>
+	<link rel="stylesheet" type="text/css" href="css/reset.css">
+	<link rel="stylesheet" type="text/css" href="css/tackOut.css">
+</head>
+<body>
+<div id="main-tackout">
+	<div class="record">
+		<strong>时时出库记录</strong>
+		<section>
+			<img style="display: block;margin:auto;" src="img/loadingtwo.gif">
+			<ul id="record-tackout"> 
+			</ul>
+		</section>
+	</div>
+	<div class="status">
+		<strong>系统状态</strong>
+		<section id="status-tackout">
+			<div>
+				<em>RFID启动失败</em>
+			</div>
+			<div>
+				<img src="img/loadingtwo.gif">
+			</div>
+			<div>
+				<em>捕获成功、正在出库</em>
+			</div>
+			<div>
+				<em>出库成功</em>
+			</div>
+		</section>
+	</div>
+	<div class="details">
+		<strong>出库商品信息</strong>
+		<section id="details-tackout">
+			<ul>
+				<li><strong>商品编号：</strong><em class="comMessage" id="comid">000</em></li>
+				<li><strong>商品名称：</strong><em class="comMessage" id="comname">000</em></li>
+				<li><strong>商品数量：</strong><em class="comMessage" id="comnum">000</em></li>
+				<li><strong>出库时间：</strong><em class="comMessage" id="comtime">000</em></li>
+			</ul>
+			<!-- <article>
+				<strong>本次出库数量</strong>
+			</article> -->
+		</section>
+	</div>
+</div>
+<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="js/tackOut.js"></script>
+</body>
+</html>

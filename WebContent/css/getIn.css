@@ -1,0 +1,111 @@
+/* 入库界面CSS */
+#main-getin{
+	width:960px;
+	height:578px;
+	margin:10px;
+	overflow: hidden;
+	border-bottom-right-radius: 5px;
+	box-shadow: 1px 1px 8px #666;
+	padding:10px;
+}
+.record{
+	float:right;
+	width:640px;
+	height:555px;
+	border:1px solid #B378F6;
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+}
+.record>strong{
+	text-align: center;
+	display: block;
+	font-family: SimSun;
+	font-size:20px;
+	padding:10px;
+	color:#fff;
+	background-color: #B378F6;
+}
+#record-getin{
+	padding:10px;
+}
+#record-getin>li{
+	font-style: normal;
+	font-size: 16px;
+	line-height: 30px;
+	border-bottom: 1px solid #E5E5E5;
+}
+#record-getin>li>em{
+	font-style: normal;
+}
+.status{
+	width:290px;
+	height:150px;
+	text-align: center;
+	margin-bottom: 5px;
+	border:1px solid #65F0B1;
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+}
+.status>strong{
+	text-align: center;
+	display: block;
+	font-family: SimSun;
+	font-size:20px;
+	padding:10px;
+	color:#fff;
+	background-color:#65F0B1;
+}
+#status-getin{
+	
+}
+#status-getin>div:first-child{
+	display:none;
+}
+#status-getin>div:nth-child(2){
+	/*display:none;*/
+}
+#status-getin>div:nth-child(3){
+	display:none;
+}
+#status-getin>div:last-child{
+	display:none;
+}
+#status-getin>div>em{
+	display: block;
+	width:200px;
+	height:50px;
+	line-height: 34px;
+	font-style: normal;
+	font-size: 18px;
+	margin:24px auto;
+	border:8px double;
+	border-radius: 5px;
+	border-color: #54F35B;
+}
+.details{
+	width:290px;
+	height:400px;
+	border:1px solid #F6B978;
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+}
+.details>strong{
+	text-align: center;
+	display: block;
+	font-family: SimSun;
+	font-size:20px;
+	padding:10px;
+	color:#fff;
+	background-color: #F6B978;
+}
+#details-getin{
+	width:100%;
+	height:350px;
+	padding:10px;
+}
+#details-getin li{
+	line-height: 30px;
+}
+.comMessage{
+	font-style: normal;
+}

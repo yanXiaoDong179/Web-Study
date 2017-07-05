@@ -1,0 +1,152 @@
+/*home界面的css*/
+body{
+	background-color:#79C0B0;
+}
+header{
+	height:40px;
+	width:100%;
+	font-size:0;
+	background-color:#497775;
+	margin-bottom:5px;
+	box-shadow:0 2px 10px #497775;
+}
+footer{
+	width:1180px;
+	height:100px;
+	margin:0 auto;
+}
+footer p{
+	padding-top:10px;
+	line-height:30px;
+	font-size:14px;
+	color:#333;
+}
+#Copyright em{
+	font-style:normal;
+	line-height:30px;
+	font-size:14px;
+	color:#333;
+}
+.header{
+	max-width:1180px;
+	margin:0 auto;
+}
+.header>em{
+	display:block;
+	height:40px;
+	line-height:40px;
+	float:left;
+	font-size:18px;
+	font-style: normal;
+	color:#fff;
+}
+.header>span{
+	display:block;
+	height:40px;
+	float:right;
+}
+.header>span img{
+	width:34px;
+	height:40px;
+	padding-top:2px;
+	vertical-align:top;
+}
+#home-user{
+	display:inline-block;
+	line-height:30px;
+	font-size:18px;
+	padding-top:10px;
+	padding-right:10px;
+	color:#fff;
+}
+.center{
+	width:1180px;
+	margin:0 auto;
+}
+#nav{
+	float:left;
+	width: 200px;
+	height:598px;
+	padding-top:5px;
+	background-color:#497775;
+}
+#nav li{
+	text-align: center;
+	width:100%;
+	height:57px;
+	line-height: 45px;
+	padding:5px 0;
+	font-size: 16px;
+	color:#fff;
+	cursor:pointer;
+	border-top:1px solid #89C4C6;
+	border-bottom: 1px solid #AEDBDE;
+}
+#nav li:hover{
+	background-color:#63CFB2;
+}
+#content{
+	position: relative;
+	margin-left: 200px;
+	width:980px;
+	height:598px;
+	overflow:hidden;
+	background-color: #EEE;
+/*	padding:1px;*/
+}
+#load{
+	position: absolute;
+	top:40%;
+	left:40%;
+}
+#aside{
+	position: absolute;
+	overflow: hidden;
+	top:200px;
+	right:10px;
+	height:300px;
+}
+#aside-left{
+	float:left;
+	width:35px;
+	height:100%;
+	background-color: #60A8D4;
+}
+#aside-left p{
+	font-size: 18px;
+	width:25px;
+	color:#fff;
+}
+#aside-right{
+	float:left;
+	width:365px;
+	height:100%;
+	display: none;
+	background-color: #8ACAF1;
+}
+.hand>span{
+	display: block;
+	width:300px;
+	margin:5px 0;
+	height:30px;
+}
+.active{
+	background-color:#11B68A !important;
+}
+.nologin{
+	text-align:center;
+	width:400px;
+	margin:auto;
+	margin-top:160px;
+}
+.nologin strong{
+	display:block;
+	font-size:20px;
+	line-height:80px;
+}
+.nologin button{
+	display:block;
+	width:100px;
+	height:40px;
+	margin:0 auto;
+}

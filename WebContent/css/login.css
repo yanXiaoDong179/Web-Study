@@ -1,0 +1,209 @@
+/*登陆界面css*/
+body{
+	min-height: 600px !important;
+	min-width:1020px;
+}
+header{
+	height:40px;
+	background-color: #666;
+	font-size: 0;
+}
+footer{
+	height:60px;
+	background-color: #999;
+}
+.index-logo{
+	height:40px;
+	float:left;
+	margin-left:20px;
+}
+.index-logo em{
+	line-height:40px;
+	font-size:18px;
+	font-style: normal;
+	color:#fff;
+}
+.index-about{
+	float:right;
+	margin-right: 40px;
+}
+.zhimei{
+	position:absolute;
+	z-index:99;
+	padding:5px;
+	width:260px;
+	margin-left:-160px;
+	font-size:14px;
+	color:#333;
+	background-color:rgba(255,255,255,0.9);
+}
+.zhimei p{
+	line-height:24px;
+}
+.index-about li{
+	font-size: 16px;
+	line-height: 40px;
+	padding:0 10px;
+	color: #fff;
+	cursor: pointer;
+}
+.index-about li:hover{
+	background-color: #777;
+}
+.main{
+	width:100%;
+	height:calc(100% - 40px);
+	font-size: 0;
+}
+.repeatimg{
+	width:100%;
+	height:100%;
+	overflow:hidden;
+	position:relative;
+}
+.repeatimg>li{
+	position:absolute;
+	width:100%;
+	height:100%;
+	opacity:0;
+}
+.repeatimg>li:first-child{
+	opacity:1;
+}
+.repeatimg>li>img{
+	width:100%;
+	height:100%;
+}
+.imgMessage{
+	position:absolute;
+	top:80px;
+	left:50%;
+}
+.img-logo{
+	display:block;
+	margin-left:-100px;
+	padding-bottom:50px;
+}
+#messageTitle{
+	display:block;
+	text-align:center;
+	width:600px;
+	margin-left:-300px;
+	font-size:40px;
+	font-weight:400;
+	color:#fff;
+	padding-bottom:20px;
+}
+#messageContent{
+	display:block;
+	text-align:center;
+	width:600px;
+	margin-left:-300px;
+	font-size:30px;
+	font-weight:300;
+	color:#fff;
+}
+.login{
+	background-color:rgba(255,255,255,0.9);
+	position:absolute;
+	z-index:9;
+	border-radius: 6px;
+	top:150px;
+	left:50%;
+	width: 304px;
+	margin-left:-152px;
+	overflow: hidden;
+	display:none;
+}
+.login p:first-child{
+	font-size:18px;
+	font-weight: bold;
+	line-height:50px;
+	color:#666;
+}
+.login form{
+	height:250px;
+	text-align: center;
+}
+.login input[type="text"],.login input[type="password"]{
+	display:block;
+	width:250px;
+	height:35px;
+	padding-left:10px;
+	margin:10px 25px;
+}
+.login input[type="text"]{
+	margin-top:30px;
+}
+.login input[type="text"]:hover,
+.login input[type="password"]:hover,
+.login input[type="text"]:focus,
+.login input[type="password"]:focus{
+	border:1px solid #66C8F4;
+	box-shadow: 0 0 5px 1px #66C8F4;
+}
+.login input[type="button"]{
+	display:block;
+	border:0;
+	width:250px;
+	height:30px;
+	margin:10px 25px;
+	border-radius: 5px;
+	font-weight:bold;
+	font-size:16px;
+	color:#fff;
+	background-color:#70C4EB;
+	cursor:pointer;
+}
+.login input[type="button"]:hover{
+	background-color:#66C8F4;
+}
+.enter{
+	position:absolute;
+	z-index:2;
+	border-radius: 6px;
+	bottom:20%;
+	left:50%;
+	width: 100px;
+	height:40px;
+	margin-left:-50px;
+}
+.enter button{
+	display:block;
+	width:100%;
+	height:40px;
+	border:none;
+	border-radius: 6px;
+	line-hight:40px;
+	font-size:16px;
+	color:#FFF;
+	background-color:#7c82ff;
+}
+.enter button:hover{
+	background-color:#90ef7f;
+}
+#meg{
+	height: 20px;
+	line-height: 20px;
+	display: block;
+	float: left;
+	margin-left:30px;
+}
+footer>p{
+	padding-left:10px;
+	line-height:30px;
+	font-size:14px;
+	color:#fff;
+}
+#Copyright em{
+	font-style:normal;
+	padding-left:10px;
+	line-height:26px;
+	font-size:14px;
+	color:#fff;
+}
+#CopyrightDate{
+	line-height:26px;
+	font-size:14px;
+	color:#fff;
+}

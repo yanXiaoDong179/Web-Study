@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+	<meta charset="utf-8">
+	<title>Login</title>
+	<link rel="stylesheet" type="text/css" href="css/reset.css">
+	<link rel="stylesheet" type="text/css" href="css/login.css">
+</head>
+<body>
+<header>
+	<div class="index-logo">
+		<em>物联网智能物流仓储系统</em>
+	</div>
+	<div class="index-about">
+		<ul><li>关于我们</li></ul>
+	</div>
+</header>
+<div class="main">
+	<ul class="repeatimg">
+		<li><img src="img/index-home01.jpg"/></li>
+		<li><img src="img/index-home02.jpg"/></li>
+		<li><img src="img/index-home03.jpg"/></li>
+		<li><img src="img/index-home04.jpg"/></li>
+		<li><img src="img/index-home05.jpg"/></li>
+	</ul>
+	<div class="imgMessage">
+		<span class="img-logo"><img  src="img/logo.png"/></span>
+		<span id="messageTitle">互联网与物品相交融</span>
+		<span id="messageContent">智慧地球就在这里</span>
+	</div>
+	<div class="login">
+		<form name="login">
+			<p>工作人员登录</p>
+			<span id="meg" style="font-size:14px"></span>
+			<input type="text" id="username" placeholder="用户名">
+			<input type="password" id="password" placeholder="密码">
+			<input type="button"  id="enterGo" onclick="log()" value="登录" >
+	 	</form>
+	</div>
+	<div class="enter">
+		<button type="button">点击登录</button>
+	</div>
+</div>
+<footer>
+	<p>开发人员：吴正杰、鄢小冬、曾求志</p>
+	<div id="Copyright">
+		<em>智美轻联版权所有 Copyright&nbsp©&nbsp</em><time id="CopyrightDate">time</time>
+	</div>
+</footer>
+<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="js/index.js"></script>
+</body>
+</html>

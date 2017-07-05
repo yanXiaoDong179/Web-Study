@@ -4,93 +4,92 @@
 	<meta charset="utf-8">
 	<title>Test</title>
 	<style type="text/css" href="sbtb/css/reset.css"></style>
-	<script type="text/javascript" src="sbtb/js/jquery-3.2.1.min.js"></script>
+	<script type="text/javascript" src="js/jquery3.2.1.js"></script>
 	<style type="text/css">
-
-		/*开关的轮廓*/
-		.button{
-			display: block;
-			position: relative;
-			width:160px;
-			height:180px;
-			border-radius: 5px;
-			background-color: #f1f1f1;
-		}
-		.button2{
-			display: block;
-			position: relative;
-			width:160px;
-			height:180px;
-			border-radius: 5px;
-			background-color: #f1f1f1;
-		}
-		.indicate{
-			display: block;
-			position: absolute;
-			margin:60px 0 0 70px;
-			width: 20px;
-			height: 4px;
-			border-radius: 2px;
-			background-color: #A8C1C2;
-			z-index: 1;
-			transition: all 200ms;
-		}
-		.indicate_yes{
-			margin:69px 0 0 70px;
-			background-color: #A3D7E7;
-		}
-		/*开关内部的小按钮*/
-		.button:after{
-			display: block;
-			position: absolute;
-			top:40px;
-			bottom: 40px;
-			left:20px;
-			right:20px;
-			line-height: 52px;
-			border:1px solid #FFF;
-			transition: all 200ms;
-		}
-		.button2:after{
-			display: block;
-			position: absolute;
-			top:49px;
-			bottom: 31px;
-			left:20px;
-			right:20px;
-			line-height: 52px;
-			border:1px solid #FFF;
-			transition: all 200ms;
-		}
-		/*默认状态的小按钮*/
-		.on:after {
-		  content: '';
-		  border-radius: 5px;
-		  /*border:1px solid #FFF;*/
-		  background: linear-gradient(#fff, #f2f2f2 80%,#fff);
-		  box-shadow: 0 1px 0 0 #fff,
-		  	0 3px 0.5px 0 #E7E9EA,
-		  	0 5px 0.5px 0 #DEDFDF,
-		  	0 6px 0.5px 0 #CCCCCD,
-		  	0 7px 0.5px 0 #C5C7C7,
-		  	0 8px 2px 0 #818283,
-		  	0 9px 2px 0 #A7A8A8;
-		}
-
-		/*关闭后的小按钮*/
-		.off:after {
-		  content: '';
-		  border-radius: 5px;
-		  /*border:1px solid #FFF;*/
-		  background: linear-gradient(#fff, #f2f2f2 80%,#fff);
-		  box-shadow: 0 -1px 0 0 #fff,
-		  	0 -3px 0.5px 0 #E7E9EA,
-		  	0 -5px 0.5px 0 #DEDFDF,
-		  	0 -6px 0.5px 0 #CCCCCD,
-		  	0 -7px 0.5px 0 #C5C7C7,
-		  	0 -8px 2px 0 #818283,
-		  	0 -9px 2px 0 #A7A8A8;
-		}
+	/*开关的轮廓*/
+	.button{
+		display: block;
+		position: relative;
+		width:160px;
+		height:180px;
+		border-radius: 5px;
+		background-color: #f1f1f1;
+	}
+	.button2{
+		display: block;
+		position: relative;
+		width:160px;
+		height:180px;
+		border-radius: 5px;
+		background-color: #f1f1f1;
+	}
+	/*指示灯*/
+	.indicate{
+		display: block;
+		position: absolute;
+		margin:60px 0 0 70px;
+		width: 20px;
+		height: 4px;
+		border-radius: 2px;
+		background-color: #A8C1C2;
+		z-index: 1;
+		transition: all 200ms;
+	}
+	.indicate_yes{
+		margin:69px 0 0 70px;
+		background-color: #A3D7E7;
+	}
+	/*开关内部的小按钮*/
+	.button:after{
+		display: block;
+		position: absolute;
+		top:40px;
+		bottom: 40px;
+		left:20px;
+		right:20px;
+		line-height: 52px;
+		border:1px solid #FFF;
+		transition: all 200ms;
+	}
+	.button2:after{
+		display: block;
+		position: absolute;
+		top:49px;
+		bottom: 31px;
+		left:20px;
+		right:20px;
+		line-height: 52px;
+		border:1px solid #FFF;
+		transition: all 200ms;
+	}
+	/*默认状态的小按钮*/
+	.on:after {
+	  content: '';
+	  border-radius: 5px;
+	  /* CSS3的颜色渐变凸显按钮的凸出感 */
+	  background: linear-gradient(#fff, #f2f2f2 80%,#fff);
+	  /* CSS3的影音的综合应用，绘制按钮的边缘，给予立体感 */
+	  box-shadow: 0 1px 0 0 #fff,
+	  	0 3px 0.5px 0 #E7E9EA,
+	  	0 5px 0.5px 0 #DEDFDF,
+	  	0 6px 0.5px 0 #CCCCCD,
+	  	0 7px 0.5px 0 #C5C7C7,
+	  	0 8px 2px 0 #818283,
+	  	0 9px 2px 0 #A7A8A8;
+	}
+	/*关闭后的小按钮*/
+	.off:after {
+	  content: '';
+	  border-radius: 5px;
+	  background: linear-gradient(#fff, #f2f2f2 80%,#fff);
+	  box-shadow: 0 -1px 0 0 #fff,
+	  	0 -3px 0.5px 0 #E7E9EA,
+	  	0 -5px 0.5px 0 #DEDFDF,
+	  	0 -6px 0.5px 0 #CCCCCD,
+	  	0 -7px 0.5px 0 #C5C7C7,
+	  	0 -8px 2px 0 #818283,
+	  	0 -9px 2px 0 #A7A8A8;
+	}
 	</style> 
 </head>
 <body>

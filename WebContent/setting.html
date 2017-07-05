@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+	<meta charset="utf-8">
+	<title>setting</title>
+	<link rel="stylesheet" type="text/css" href="css/reset.css">
+	<link rel="stylesheet" type="text/css" href="css/setting.css">
+</head>
+<body>
+<div id="main-set">
+	<div class="main-set">
+		<div class="title-user">
+			<strong>用户设置</strong>
+		</div>
+		<div class="setting-user">
+			<form>
+				<!-- <section>
+					<strong>当前用户：</strong>
+					<em id="set-user"></em>
+				</section> -->
+				<span id="meg"></span>
+				<input type="password" name="oldpw" placeholder="旧密码">
+				<input type="password" name="newpw" placeholder="新密码">
+				<input type="password" name="againpw" placeholder="再次确认">
+				<input type="button" name="enter" value="确认修改">
+			</form>
+		</div>
+		<div class="title-system">
+			<strong>系统设置：</strong>
+		</div>
+		<article class="setting-system">
+			<span>
+				<strong>启动智能模式：</strong>
+				<i class="zn set-button"></i>
+			</span>
+			<span>
+				<strong>启动时时监控：</strong>
+				<i class="jk set-button"></i>
+			</span>
+			<span>
+				<strong>启动报警提示</strong>
+				<i class="bj set-button"></i>
+			</span>
+		</article>
+	</div>
+</div>
+<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="js/setting.js"></script>
+</body>
+</html>

@@ -3,13 +3,13 @@
 <head>
 	<meta charset="utf-8">
 	<title>Test</title>
-	<style type="text/css" href="sbtb/css/reset.css"></style>
-	<script type="text/javascript" src="sbtb/js/jquery-3.2.1.min.js"></script>
+	<style type="text/css" href="css/reset.css"></style>
 	<style type="text/css">
 
 		/*开关的轮廓*/
 		.button{
 			display: block;
+			margin:100px auto;
 			position: relative;
 			width:120px;
 			height:60px;
@@ -17,7 +17,6 @@
 			border:2px solid #666;
 			background-color: #EDE9E8;
 		}
-
 		/*开关内部的小按钮*/
 		.button:after{
 			display: block;
@@ -62,8 +61,9 @@
 </head>
 <body>
 <a href="#" class="button on"></a>
+<script type="text/javascript" src="js/jquery3.2.1.js"></script>
 <script type="text/javascript">
-$('.button').click(function(e) {
+$('.button').click(function(e){
   var toggle = this;
   e.preventDefault();
   $(toggle).toggleClass('on')

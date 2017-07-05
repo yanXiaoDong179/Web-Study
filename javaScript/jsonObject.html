@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>jsonObject</title>
+</head>
+<body>
+
+<script type="text/javascript" src="js/jquery3.2.1.js"></script>
+<script type="text/javascript">
+	//创建一个简单的json对象
+	var json = {
+		name:"lyle18",
+		age:[18,19,20]	//可以设置多个值
+	};
+
+	//创建一个多组数据的JSON对象
+	var JSON = [
+	{"name":"lyle19","age":19},
+	{"name":"lyle20","age":20}
+	];
+
+	/* 原生JS的获取方法 */
+	var index;
+	var data;
+	for(index in JSON){									//迭代遍历JSON中所有组数的索引值
+		console.log(index);								//返回值为0,1,2,3,4...
+		for(data in JSON[index]){					//迭代遍历出JSON中某一组的所有的属性名称(KEY)
+			console.log(data);							//返回所有的属性名
+			console.log(JSON[index][data]);	//根据数组索引和KEY，返回具体的属性值
+			console.log(JSON[index].age);		//直接迭代返回JSON中KEY=age;的所有属性值
+			console.log(JSON[1].age);				//直接返回JSON中第二组的age
+		}
+	};
+	var age;
+	for(age in json){
+		console.log(age);				//返回json对象中的所有属性（KEY）
+		console.log(json[age]);	//返回json对象中字段名为age的所有属性值
+	};
+
+	/* jQuery的获取方法 */
+	//$.each()方法同样是迭代遍历，对于单组json对象，回调函数对一个参数表示KEY，第二个表示value
+	//对于多组数据的JSON对象，第一个参数表示索引值，第二个表示单组对象
+	console.log("以下是$each()获取的数据");
+	$.each(json,function(i,n){	//i 表示KEY，n 表示对应的value
+		console.log(i);
+		console.log(json[i]);			//返回对应的属性值==n
+		console.log(n);
+	});
+	$.each(JSON,function(x,y){
+		console.log(x);						//返回JSON中所有集合的索引值
+		//console.log(y);
+		//console.log(JSON[x]);			//返回其中一组所代表的对象==y
+		$.each(y,function(z,m){
+			console.log(z);					//z,表示KEY;m,表示属性值(value)
+			console.log(m);
+			console.log(y.age)					//再次返回age的属性值
+			console.log(JSON[1].age);		//直接返回JSON中第二组的age属性值
+		})
+	});
+</script>
+</body>
+</html>

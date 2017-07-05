@@ -1,0 +1,164 @@
+/*index-home-CSS*/
+#main-home{
+	width:980px;
+	height:598px;
+	position: relative;
+}
+#main-home>div{
+	width:470px;
+	height:276px;
+	margin:10px;
+	float: left;
+	border-radius: 5px;
+	box-shadow: 1px 1px 8px #666;
+	background-color: #fff;
+}
+.hover{
+	cursor: pointer;
+	box-shadow: 2px 2px 12px #666 !important;
+}
+.mini{
+	height:240px;
+	overflow: hidden;
+}
+.mini>span{
+	display: block;
+	width:80%;
+	margin:auto;
+	text-align: center;
+	font-size: 16px;
+	color:green;
+	height:30px;
+	line-height: 30px;
+	border-bottom: 1px solid #999;
+}
+.condition-1,.condition-2,.condition-3{
+	width:80%;
+	margin:0 auto;
+	margin-top: 20px;
+}
+.mini ul>li{
+	display: block;
+	float:left;
+	width:183px;
+	height:90px;
+	margin:2px;
+	border-radius: 5px;
+	background-color: rgba(235,240,243,0.2);
+}
+.mini  ul>li>img{
+	width:50px;
+	margin-top: 20px;
+	margin-left: 10px;
+}
+.mini  em{
+	color:green;
+}
+.max{
+	display: none;
+}
+.goods{
+	width: 90%;
+	margin: auto;
+}
+.goods_title{
+	text-align: center;
+	height: 50px;
+	border-bottom:1px solid green;
+	margin-bottom: 10px;
+}
+.goods_title>strong{
+	line-height: 50px;
+	font-size: 20px;
+}
+.goods .shelf{
+	overflow: hidden;
+}
+.shelf>li{
+	width:194px;
+	height:150px;
+	margin:10px;
+	padding:0 10px;
+	float: left;
+	box-shadow: 1px 1px 5px #999;
+}
+.shelf>li>em{
+	display:block;
+	margin-bottom: 5px;
+	font-style: normal;
+	text-align: center;
+	line-height: 24px;
+	border-bottom: 2px dotted #999;
+}
+.canves{
+	width:100%;
+	height: 110px;
+	position: relative;
+}
+.canves>i{
+	position:absolute;
+	display: block;
+	height:8px;
+	width: 8px;
+	border-radius: 50%;
+	background-color:#666;
+	box-shadow: 0 0 4px 2px #666;
+	top: 0;
+	left: 0;
+	cursor: pointer;
+	transition:all 500ms;
+}
+.iActive{
+	box-shadow: 0 0 4px 2px #666,
+		0 0 1px 10px #fff,
+		0 0 1px 11.5px #666 !important;
+}
+.iMessage{
+	position: absolute;
+	z-index: 2;
+	background-color: rgba(255,255,255,0.8);
+	width:220px;
+	height:120px;
+	border-radius: 5px;
+	padding:5px;
+	border:1px solid #999;
+	margin-top:0px;
+	margin-left:0px;
+	box-shadow: 1px 1px 2px #E5E5E5;
+	display: none;
+}
+.iMessage>aside{
+	position: absolute;
+	margin-top: -20px;
+	margin-left:18px;
+	width: 0;
+	height: 0;
+	border-left: 6px solid transparent;
+	border-right: 6px solid transparent;
+	border-bottom: 10px solid #999;
+}
+#back>img{
+	position: absolute;
+	bottom:25px;
+	right:25px;
+	width:40px;
+	border-radius: 25px;
+	cursor: pointer;
+}
+#back>img:hover{
+	box-shadow: 0 0 20px 3px #96F0B0;
+}
+#back:hover{
+	box-shadow: 1px 1px 5px green;
+}
+.storage-4>img{
+	margin:70px 185px;
+	height:100px;
+}
+.cond-1{
+	font-size: 28px;
+}
+.suspend{
+	color:red;
+	text-align:center;
+}
